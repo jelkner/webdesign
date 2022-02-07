@@ -4,8 +4,42 @@
 <meta charset="utf-8">
 <title>isPrime</title>
 <style>
-@import url(../../mystyle.css);
+body {
+    margin: 4vw;
+}
+main {
+    padding: 4vw;
+    border: 1px dotted #777;
+}
+h1, footer {
+    text-align: center;
+}
+footer {
+    margin-top: 1vw;
+}
+a, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #C92; 
+}
 </style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                         loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  var button = document.getElementById("evalButton");
+  button.onclick = function() {
+    alert("Button was clicked!");
+  }
+}
+
+window.onload = init;
+</script>
 </head>
 <body>
 <header>
@@ -29,12 +63,6 @@
 </main>
 
 <script>
-var loc = window.location.href;
-var HTMLvalidatorLinkStr = 'http://validator.w3.org/check?uri=' + loc;
-var CSSvalidatorLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
-                          loc + '?profile=css3';
-document.getElementById("vLink1").setAttribute("href", HTMLvalidatorLinkStr);
-document.getElementById("vLink2").setAttribute("href", CSSvalidatorLinkStr);
 </script>
 
 </body>
