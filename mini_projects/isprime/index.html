@@ -37,13 +37,32 @@ function init() {
   var input = document.getElementById("numberInput");
   var output = document.getElementById("outputDiv");
 
+  function isPrime(n) {
+    let val = 2;
+    let maxPossible = Math.sqrt(n);
+    while (val <= maxPossible) {
+      if (n % val == 0) return false;
+      val++; 
+    }
+    return true;
+  }
+
   button.onclick = function() {
     n = input.value;
-    alert("You entered: " + n);
+    let result;
+    if (isPrime(n)) {
+      result = "Your number, " + n + ", is prime.";
+    }
+    else {
+      result = "Your number, " + n + ", is not prime.";
+    }
+    output.innerHTML = result;
   }
 }
 
 window.onload = init;
+/*
+*/
 </script>
 </head>
 <body>
@@ -57,8 +76,7 @@ window.onload = init;
 <input type="button" id="evalButton" value="Is number prime?">
 </form>
 
-<div id="outputDiv">
-</div>
+<p id="outputDiv"></p>
 </main>
 
 <footer>
