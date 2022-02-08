@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>isPrime</title>
+<title>largestPrimeDivisor</title>
 <style>
 body {
     margin: 4vw;
@@ -47,16 +47,20 @@ function init() {
     return true;
   }
 
+  function largestPrimeDivisor(num) {
+    let divisor = num;
+
+    do {
+      if (isPrime(divisor) && (num % divisor == 0)) return divisor;
+      divisor--;
+    } while (divisor > 1);
+
+    return 1;
+  }
+
   button.onclick = function() {
     n = input.value;
-    let result;
-    if (isPrime(n)) {
-      result = "Your number, " + n + ", is prime.";
-    }
-    else {
-      result = "Your number, " + n + ", is not prime.";
-    }
-    output.innerHTML = result;
+    output.innerHTML = largestPrimeDivisor(n);
   }
 }
 
@@ -67,13 +71,14 @@ window.onload = init;
 </head>
 <body>
 <header>
-<h1>isPrime</h1>
+<h1>largestPrimeDivisor</h1>
 </header>
 
 <main>
 <form>
 <input type="number" id="numberInput" size="10">
-<input type="button" id="evalButton" value="Is number prime?">
+<input type="button" id="evalButton"
+value="And the largest prime divisor is ...">
 </form>
 
 <p id="outputDiv"></p>
