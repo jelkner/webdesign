@@ -308,8 +308,6 @@ a, a:visited{
 
 .details .concise ul{
   margin: 0 !important;
-  -webkit-columns: 2;
-  -moz-columns: 2;
   columns: 2;
 }
 
@@ -372,4 +370,10 @@ a, a:visited{
   font-family: "Source Code Pro";
   font-weight: 400;
   font-style: normal;
+}
+
+@media print{
+  div#disclaimer {
+    visibility: hidden;
+  }
 }
