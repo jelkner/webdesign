@@ -1,31 +1,31 @@
 function save(item) {
-  var playlistarray = getStorearray("playlist");
-  playlistarray.push(item);
-  localStorage.setItem("playlist", JSON.stringify(playlistarray));
+  var playlistArray = getStoreArray("playlist");
+  playlistArray.push(item);
+  localStorage.setItem("playlist", JSON.stringify(playlistArray));
 }
 
 function loadPlaylist() {
-  var playlistarray = getSavedSongs();
+  var playlistArray = getSavedSongs();
   var ul = document.getElementById("playlist");
-  if (playlistarray != null) {
-    for (var i = 0; i < playlistarray.length; i++) {
+  if (playlistArray != null) {
+    for (var i = 0; i < playlistArray.length; i++) {
       var li = document.createElement("li");
-      li.innerHTML = playlistarray[i];
+      li.innerHTML = playlistArray[i];
       ul.appendChild(li);
     }
   }
 }
 
 function getSavedSongs() {
-  return getStorearray("playlist");
+  return getStoreArray("playlist");
 }
 
-function getStorearray(key) {
-  var playlistarray = localStorage.getItem(key);
-  if (playlistarray == null || playlistarray == "") {
-    playlistarray = new array();
+function getStoreArray(key) {
+  var playlistArray = localStorage.getItem(key);
+  if (playlistArray == null || playlistArray == "") {
+    playlistArray = new Array();
   } else {
-    playlistarray = JSON.parse(playlistarray);
+    playlistArray = JSON.parse(playlistArray);
   }
-  return playlistarray;
+  return playlistArray;
 }
