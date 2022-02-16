@@ -17,9 +17,28 @@ function addValidation() {
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
 
+function findPrimeFactor(n) {
+  if (n < 1) {
+    return -1;
+  }
+  if (n % 2 == 0) {
+    return 2;
+  }
+  for (let cf = 3; cf < n/2; cf += 2) {
+    if (n % cf == 0) {
+      return cf;
+    }
+  }
+  return -1;
+}
+
 function handleButtonClick(e) {
-  var number = document.getElementById("numberInput").value;
-  var outputP = document.getElementById("output");
+  let number = document.getElementById("numberInput").value;
+  let outputP = document.getElementById("output");
+  let outStr = "";
   
-  outputP.innerHTML = "Your number is " + number + "!";
+  outStr += "Your number, " + number + ", has a prime factor of ";
+  outStr += findPrimeFactor(number) + ".";
+
+  outputP.innerHTML = outStr;
 }
