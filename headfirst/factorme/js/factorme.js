@@ -17,61 +17,67 @@ function addValidation() {
 }
 
 function isPrime(n) {
-  if (n % 2 == 0) {
+  if (n == 0 || n == 1) {
+    return false;
+  }
+  if (n == 2) {
     return true;
   }
-  let maxMinFactor = Math.sqrt(n);
-  for (let cFactor = 3; cFactor <= maxMinFactor; cFactor += 2) {
-    if (n % cFactor == 0) {
+  if (n % 2 == 0) {
+    return false;
+  }
+  let factMax = Math.sqrt(n) + 2;
+  for (let candidateFact = 3; candidateFact <= factMax; candidateFact += 2) {
+    if (n % candidateFact == 0) {
       return false;
     }
   }
   return true;
 }
 
-function findPrimeFactor(n) {
-  if (n < 1) {
-    return -1;
-  }
+function findLowestPrimeFactor(n) {
   if (n % 2 == 0) {
     return 2;
   }
-  let maxMinFactor = Math.sqrt(n);
-  for (let candidateFactor = 3; candidateFactor < maxMinFactor;
-       candidateFactor += 2) {
-    if (n % candidateFactor == 0) {
-      return candidateFactor;
+  let factMax = Math.sqrt(n) + 2;
+  for (let candidateFact = 3; candidateFact < factMax; candidateFact += 2) {
+    if (n % candidateFact == 0) {
+      return candidateFact;
     }
   }
-  return -1;
+  return n;
 }
 
 function createPrimeFactorList(n) {
-  let primeList = [];
+  let primeFactsList = [];
   while (!isPrime(n)) {
-    let primeFactor = findPrimeFactor(n);
-    primeList.push(primeFactor);
+    let primeFactor = findLowestPrimeFactor(n);
+    primeFactsList.push(primeFactor);
     n /= primeFactor;
   }
-  primeList.push(n);
-  return primeList;
+  primeFactsList.push(n);
+  return primeFactsList;
 }
 
 function handleButtonClick(e) {
   let number = document.getElementById("numberInput").value;
   let outputP = document.getElementById("output");
   let outStr = "";
+  let lastPrimesStr = "";
   
   if (isPrime(number)) {
     outStr += "Your number, " + number + ", is prime.";
   } else {
     primes = createPrimeFactorList(number);
     outStr += "Your number, " + number + ", is a product of prime factors ";
-    let lastPrimeIndex = primes.length - 1;
-    for (let i = 0; i < lastPrimeIndex; i++) { 
-      outStr += primes[i] + ", ";
+    
+    let penultIndex = primes.length - 2;
+    lastPrimesStr = primes[penultIndex] + " and " + primes[penultIndex+1];
+    
+    for (let i = 0; i < penultIndex; i++) { 
+      outStr +=  primes[i] + ", ";
     };
-    outStr += "and " + primes[lastPrimeIndex] + ".";
+    outStr += lastPrimesStr; 
   }
 
   outputP.innerHTML = outStr;
