@@ -18,7 +18,7 @@ function addValidation() {
 
 function isPrime(n) {
   if (n % 2 == 0) {
-    return false;
+    return true;
   }
   let maxMinFactor = Math.sqrt(n);
   for (let cFactor = 3; cFactor <= maxMinFactor; cFactor += 2) {
@@ -36,7 +36,9 @@ function findPrimeFactor(n) {
   if (n % 2 == 0) {
     return 2;
   }
-  for (let candidateFactor = 3; candidateFactor < n/2; candidateFactor += 2) {
+  let maxMinFactor = Math.sqrt(n);
+  for (let candidateFactor = 3; candidateFactor < maxMinFactor;
+       candidateFactor += 2) {
     if (n % candidateFactor == 0) {
       return candidateFactor;
     }
