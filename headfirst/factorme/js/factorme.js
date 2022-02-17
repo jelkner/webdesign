@@ -1,10 +1,9 @@
-/* playlist.js */
+/* factorme.js */
 window.onload = init;
 
 function init() {
   var button = document.getElementById("factorButton");
   button.onclick = handleButtonClick;
-
   addValidation();
 }
 
@@ -21,15 +20,12 @@ function isPrime(n) {
   if (n % 2 == 0) {
     return false;
   }
-
   let maxMinFactor = Math.sqrt(n);
-
   for (let cFactor = 3; cFactor <= maxMinFactor; cFactor += 2) {
     if (n % cFactor == 0) {
       return false;
     }
   }
-
   return true;
 }
 
@@ -40,9 +36,9 @@ function findPrimeFactor(n) {
   if (n % 2 == 0) {
     return 2;
   }
-  for (let cf = 3; cf < n/2; cf += 2) {
-    if (n % cf == 0) {
-      return cf;
+  for (let candidateFactor = 3; candidateFactor < n/2; candidateFactor += 2) {
+    if (n % candidateFactor == 0) {
+      return candidateFactor;
     }
   }
   return -1;
@@ -50,12 +46,12 @@ function findPrimeFactor(n) {
 
 function createPrimeFactorList(n) {
   let primeList = [];
-
   while (!isPrime(n)) {
     let primeFactor = findPrimeFactor(n);
     primeList.push(primeFactor);
     n /= primeFactor;
   }
+  primeList.push(n);
   return primeList;
 }
 
@@ -69,9 +65,11 @@ function handleButtonClick(e) {
   } else {
     primes = createPrimeFactorList(number);
     outStr += "Your number, " + number + ", is a product of prime factors ";
-    primes.forEach(function(value, index, primes) {
-      outStr += value + ", ";
-    });
+    let lastPrimeIndex = primes.length - 1;
+    for (let i = 0; i < lastPrimeIndex; i++) { 
+      outStr += primes[i] + ", ";
+    };
+    outStr += "and " + primes[lastPrimeIndex] + ".";
   }
 
   outputP.innerHTML = outStr;
