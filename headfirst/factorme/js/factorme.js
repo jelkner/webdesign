@@ -18,18 +18,18 @@ function addValidation() {
 }
 
 function isPrime(n) {
-  let maxMinFactor = Math.sqrt(n);
-  if (n < 2) {
+  if (n % 2 == 0) {
     return false;
   }
-  if (n % 2 == 0) {
-    return true;
-  }
+
+  let maxMinFactor = Math.sqrt(n);
+
   for (let cFactor = 3; cFactor <= maxMinFactor; cFactor += 2) {
     if (n % cFactor == 0) {
       return false;
     }
   }
+
   return true;
 }
 
