@@ -17,6 +17,22 @@ function addValidation() {
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
 
+function isPrime(n) {
+  let maxMinFactor = Math.sqrt(n);
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 == 0) {
+    return true;
+  }
+  for (let cFactor = 3; cFactor <= maxMinFactor; cFactor += 2) {
+    if (n % cFactor == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function findPrimeFactor(n) {
   if (n < 1) {
     return -1;
@@ -32,13 +48,31 @@ function findPrimeFactor(n) {
   return -1;
 }
 
+function createPrimeFactorList(n) {
+  let primeList = [];
+
+  while (!isPrime(n)) {
+    let primeFactor = findPrimeFactor(n);
+    primeList.push(primeFactor);
+    n /= primeFactor;
+  }
+  return primeList;
+}
+
 function handleButtonClick(e) {
   let number = document.getElementById("numberInput").value;
   let outputP = document.getElementById("output");
   let outStr = "";
   
-  outStr += "Your number, " + number + ", has a prime factor of ";
-  outStr += findPrimeFactor(number) + ".";
+  if (isPrime(number)) {
+    outStr += "Your number, " + number + ", is prime.";
+  } else {
+    primes = createPrimeFactorList(number);
+    outStr += "Your number, " + number + ", is a product of prime factors ";
+    primes.forEach(function(value, index, primes) {
+      outStr += value + ", ";
+    });
+  }
 
   outputP.innerHTML = outStr;
 }
