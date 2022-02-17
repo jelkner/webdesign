@@ -20,7 +20,7 @@ function isPrime(n) {
   if (n == 0 || n == 1) {
     return false;
   }
-  if (n == 2) {
+  if (n == 2 || n == 3) {
     return true;
   }
   if (n % 2 == 0) {
@@ -38,6 +38,9 @@ function isPrime(n) {
 function findLowestPrimeFactor(n) {
   if (n % 2 == 0) {
     return 2;
+  }
+  if (n % 3 == 0) {
+    return 3;
   }
   let factMax = Math.sqrt(n) + 2;
   for (let candidateFact = 3; candidateFact < factMax; candidateFact += 2) {
