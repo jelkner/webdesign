@@ -2,7 +2,7 @@
 window.onload = init;
 
 function init() {
-  var button = document.getElementById("addButton");
+  var button = document.getElementById("submitButton");
   button.onclick = handleButtonClick;
 
   loadPlaylist();
@@ -19,18 +19,18 @@ function addValidation() {
 }
 
 function handleButtonClick(e) {
-  var textInput = document.getElementById("songTextInput");
-  var songName = textInput.value;
+  var textInput = document.getElementById("reminderText");
+  var reminder = textInput.value;
 
-  if (songName == "") {
-    alert("Please enter a song");
+  if (reminder == "") {
+    alert("Please enter a reminder");
   }
   else {
     var li = document.createElement("li");
-    li.innerHTML = songName;
-    var ul = document.getElementById("playlist");
+    li.innerHTML = reminder;
+    var ul = document.getElementById("reminderlist");
     ul.appendChild(li);
-    save(songName);
+    save(reminder);
     textInput.value = "";
   }
 }

@@ -1,24 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
 body {
-    font-family: arial, sans-serif;
+  background-color: #6AA84F;
+  color: #274E13;
+  margin: 4vw;
+  font-family: Arial, sans-serif;
 }
-ul#playlist {
-    border: 1px solid #a9a9a9;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 0px;
-    list-style-type: none;
+h1 {
+  font-family: 'Mea Culpa', cursive;
+  font-size: 4vw;
 }
-ul#playlist li {
-    border-bottom: 1px solid #a9a9a9;
-    padding: 10px;
-    background-image: linear-gradient(#f9f9f9, #e3e3e3);
+main {
+  background-color: #D9EAD3;
+  padding: 4vw;
+  border: 1px dotted #777;
 }
-ul#playlist li:last-child {
-    border-bottom: none;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+main, main>form>input {
+  font-size: xx-large;
 }
-ul#playlist li:first-child {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+h1, footer {
+  text-align: center;
+}
+a, a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: #EB4; 
+}
+ul#reminder {
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 0px;
+  list-style-type: none;
+}
+ul#reminder li {
+  border-bottom: 1px solid #a9a9a9;
+  padding: 10px;
+  background-image: linear-gradient(#f9f9f9, #e3e3e3);
+}
+ul#reminder li:last-child {
+  border-bottom: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+ul#reminder li:first-child {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+footer {
+  margin-top: 2vw;
+  font-size: x-large;
 }

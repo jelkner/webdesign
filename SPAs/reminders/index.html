@@ -5,6 +5,7 @@
 <title>Reminders App</title>
 <style>
 @import url(css/reminders.css);
+@import url(css/reminders.css);
 </style>
 <script src="js/reminders.js"></script>
 <script src="js/reminders_store.js"></script>
@@ -15,10 +16,12 @@
 </header>
 <main>
 <form>
-<input type="text" id="remindert" size="40" placeholder="">
-<input type="button" id="submitButton" value="Reminders App">
+<input type="text" id="reminderText" size="40" placeholder="">
+<input type="button" id="submitButton" value="Add Reminder">
 </form>
-<p id="output"></p>
+
+<ul id="reminderlist">
+</ul>
 </main>
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
