@@ -71,7 +71,7 @@ function handleButtonClick(e) {
   if (isPrime(number)) {
     outStr += "Your number, " + number + ", is prime.";
   } else {
-    primes = createPrimeFactorList(number);
+    let primes = createPrimeFactorList(number);
     outStr += "Your number, " + number + ", is a product of prime factors ";
     
     let penultIndex = primes.length - 2;
