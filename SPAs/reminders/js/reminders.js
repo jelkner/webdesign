@@ -5,7 +5,7 @@ function init() {
   var button = document.getElementById("submitButton");
   button.onclick = handleButtonClick;
 
-  loadPlaylist();
+  loadReminderlist();
   addValidation();
 }
 

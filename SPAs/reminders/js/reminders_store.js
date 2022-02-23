@@ -4,7 +4,7 @@ function save(item) {
   localStorage.setItem("reminderslist", JSON.stringify(reminderslistArray));
 }
 
-function loadPlaylist() {
+function loadReminderlist() {
   var reminderslistArray = getSavedSongs();
   var ul = document.getElementById("reminderslist");
   if (reminderslistArray != null) {
