@@ -25,24 +25,24 @@ a, a:visited {
   font-weight: bold;
   color: #EB4; 
 }
-ul#reminder {
+ul#reminderlist {
   border: 1px solid #a9a9a9;
   border-radius: 5px;
   margin-top: 10px;
   padding: 0px;
   list-style-type: none;
 }
-ul#reminder li {
+ul#reminderlist li {
   border-bottom: 1px solid #a9a9a9;
   padding: 10px;
   background-image: linear-gradient(#f9f9f9, #e3e3e3);
 }
-ul#reminder li:last-child {
+ul#reminderlist li:last-child {
   border-bottom: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-ul#reminder li:first-child {
+ul#reminderlist li:first-child {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
