@@ -1,31 +1,31 @@
 function save(item) {
-  var reminderslistArray = getStoreArray("reminderslist");
-  reminderslistArray.push(item);
-  localStorage.setItem("reminderslist", JSON.stringify(reminderslistArray));
+  var reminderlistArray = getStoreArray("reminderlist");
+  reminderlistArray.push(item);
+  localStorage.setItem("reminderlist", JSON.stringify(reminderlistArray));
 }
 
 function loadReminderlist() {
-  var reminderslistArray = getSavedSongs();
-  var ul = document.getElementById("reminderslist");
-  if (reminderslistArray != null) {
-    for (var i = 0; i < reminderslistArray.length; i++) {
+  var reminderlistArray = getSavedReminders();
+  var ul = document.getElementById("reminderlist");
+  if (reminderlistArray != null) {
+    for (var i = 0; i < reminderlistArray.length; i++) {
       var li = document.createElement("li");
-      li.innerHTML = reminderslistArray[i];
+      li.innerHTML = reminderlistArray[i];
       ul.appendChild(li);
     }
   }
 }
 
-function getSavedSongs() {
-  return getStoreArray("reminderslist");
+function getSavedReminders() {
+  return getStoreArray("reminderlist");
 }
 
 function getStoreArray(key) {
-  var reminderslistArray = localStorage.getItem(key);
-  if (reminderslistArray == null || reminderslistArray == "") {
-    reminderslistArray = new Array();
+  var reminderlistArray = localStorage.getItem(key);
+  if (reminderlistArray == null || reminderlistArray == "") {
+    reminderlistArray = new Array();
   } else {
-    reminderslistArray = JSON.parse(reminderslistArray);
+    reminderlistArray = JSON.parse(reminderlistArray);
   }
-  return reminderslistArray;
+  return reminderlistArray;
 }
