@@ -21,6 +21,6 @@ a, a:visited {
     font-weight: bold;
     color: #C92; 
 }
-main, main>form>input {
+input {
     font-size: 2vw;
 }

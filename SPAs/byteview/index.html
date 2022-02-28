@@ -13,10 +13,16 @@
 <h1>It's All Just Bits: Six Ways to View a Byte</h1>
 </header>
 <main>
-<form>
-<input type="number" id="numberInput" size="32"
-       min=0 max=255 placeholder="A byte sized number between 0 and 255">
-<input type="button" id="inputButton" value="Click to view me different ways">
+<form action="#">
+<div>
+<label>
+Enter a byte sized number between 0 and 255:
+<input type="number" id="numberInput" min=0 max=255>
+</lable>
+</div>
+<div>
+<input type="button" id="inputButton" value="Submit">
+</div>
 </form>
 <p id="output"></p>
 </main>
