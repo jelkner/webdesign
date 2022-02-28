@@ -13,18 +13,65 @@
 <h1>It's All Just Bits: Six Ways to View a Byte</h1>
 </header>
 <main>
-<form action="#">
 <p>
+As you've heard your teacher say many times this year, <q>It's all just
+<a href="https://en.wikipedia.org/wiki/Bit">bits</a>. This
+<a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a> was
+created to help flesh out that idea.
+</p><p>
+A <a href="https://en.wikipedia.org/wiki/Byte">byte</a> is a sequence of 8
+bits. You can enter a byte below as an unsigned
+<a href="https://en.wikipedia.org/wiki/Decimal">integer</a> between
+<code>0</code> and <code>255</code>. Clicking the <button>submit</button>
+will then <a href="https://en.wiktionary.org/wiki/render">render</a> those
+bits as <b>signed integer in decimal</b>,
+<a href="https://en.wikipedia.org/wiki/Binary_number">binary</a>,
+<a href="https://en.wikipedia.org/wiki/Octal">octal</a>, and
+<a href="https://en.wikipedia.org/wiki/Hexadecimal">hexidecimal</a> number, 
+as a <a href="https://en.wikipedia.org/wiki/Code_page_437">code page 437</a>
+character, and finally as an
+<a href="https://en.wikipedia.org/wiki/8-bit_color">8-bit color</a>.
+</p>
+<form action="#">
 <label>
 Enter a byte sized number between 0 and 255:
 <input type="number" id="numberInput" size="4" min="0" max="255"
 oninvalid="alert('Please enter a number between 0 and 255');">
 </label>
-</p><p>
 <input type="button" id="inputButton" value="Submit">
-</p>
 </form>
-<p id="output"></p>
+<div id="output">
+<p></p>
+<table>
+<tr>
+  <td>Unsigned Decimal</td>
+  <td id="unsigned"></td>
+<tr>
+</tr>
+  <td>Signed Decimal</td>
+  <td id="signed"></td>
+</tr>
+<tr>
+  <td>Binary</td>
+  <td id="bin"></td>
+<tr>
+</tr>
+  <td>Octal</td>
+  <td id="oct"></td>
+<tr>
+  <td>Hexadedimal</td>
+  <td id="hex"></td>
+</tr>
+<tr>
+  <td>Code Page 437</td>
+  <td id="codepage437"></td>
+</tr>
+<tr>
+  <td>8-bit Color</td>
+  <td id="8bitcolor"></td>
+</tr>
+</table>
+</div>
 </main>
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
