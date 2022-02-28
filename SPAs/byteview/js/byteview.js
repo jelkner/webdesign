@@ -3,7 +3,7 @@ window.onload = init;
 
 function init() {
   const button = document.getElementById('inputButton');
-  button.onclick = handleButtonClick;
+  button.onclick = processButtonClick;
   addValidation();
 }
 
@@ -16,11 +16,7 @@ function addValidation() {
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
 
-function handleButtonClick(e) {
+function processButtonClick(e) {
   const number = document.getElementById("numberInput").value;
-  const outputP = document.getElementById("output");
-  let outStr = "";
-
-  outStr += "Your number, " + number + ", is in range. Thanks!";
   outputP.innerHTML = outStr;
 }
