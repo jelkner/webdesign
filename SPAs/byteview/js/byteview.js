@@ -20,7 +20,12 @@ function handleButtonClick(e) {
   let number = document.getElementById("numberInput").value;
   let outputP = document.getElementById("output");
   let outStr = "";
-  
-  outStr += "Your number, " + number + ".";
+
+  if (number < 0 || number > 255) {
+    outStr += "Your number, " + number + ", is not in range.";
+    outStr += " Please enter a number between 0 and 255.";
+  } else {
+    outStr += "Your number, " + number + ", is in range.";
+  }
   outputP.innerHTML = outStr;
 }
