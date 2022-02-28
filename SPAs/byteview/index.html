@@ -17,8 +17,9 @@
 <p>
 <label>
 Enter a byte sized number between 0 and 255:
-<input type="number" id="numberInput" size=4 min=0 max=255>
-</lable>
+<input type="number" id="numberInput" size="4" min="0" max="255"
+oninvalid="alert('Please enter a number between 0 and 255');">
+</label>
 </p><p>
 <input type="button" id="inputButton" value="Submit">
 </p>
