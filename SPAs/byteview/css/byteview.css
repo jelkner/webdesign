@@ -1,42 +1,42 @@
 body {
-    margin: 3vw;
-    font-family: arial, sans-serif;
+  margin: 3vw;
+  font-family: arial, sans-serif;
 }
 main {
-    padding: 3vw;
-    border: 1px dotted #777;
+  padding: 3vw;
+  border: 1px dotted #777;
 }
 h1 {
-    font-size: 2.6vw;
+  font-size: 2.6vw;
 }
 h1, footer {
-    text-align: center;
+  text-align: center;
 }
 a, a:visited {
-    text-decoration: none;
-    font-weight: bold;
-    color: #C92; 
+  text-decoration: none;
+  font-weight: bold;
+  color: #C92; 
 }
 form, input, #output {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 table {
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 1px dotted #555;
-    border-left: 1px dotted #555;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px dotted #555;
+  border-left: 1px dotted #555;
 }
 td {
-    width: 24vw;
-    padding: 5px;
-    border-bottom: 1px dotted #555;
-    border-right: 1px dotted #555;
+  width: 24vw;
+  padding: 5px;
+  border-bottom: 1px dotted #555;
+  border-right: 1px dotted #555;
 }
 p {
   font-size: 1.5vw;
 }
 footer {
-    margin-top: 1vw;
-    font-size: 1.6vw;
+  margin-top: 1vw;
+  font-size: 1.6vw;
 }

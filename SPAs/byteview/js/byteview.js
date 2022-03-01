@@ -54,6 +54,16 @@ function convert8bitToHTMLcolor(num) {
   return color;
 }
 
+function convertToCodePage437(num) {
+  const codePageUnicode = [
+    null, "&#x263A;", "&#x263B;", "&#x2665;",
+    "&#x2666;", "&#x2663;", "&#2660;", "&#x2022;",
+    "&#x25D8;", "&#x25CB;", "&#x25D9;", "&#x2642;",
+    "&#x2640;", "&#x266A;", "&#x266B;", "&#x263C;"
+  ];
+  return codePageUnicode[num];
+}
+
 function processButtonClick(e) {
   const number = document.getElementById("numberInput").value;
   const unsigned = document.getElementById("unsigned");
@@ -66,6 +76,8 @@ function processButtonClick(e) {
   oct.innerHTML = padZeros(convertToBase(number, 8), 8);
   const hex = document.getElementById("hex");
   hex.innerHTML = padZeros(convertToBase(number, 16), 16);
+  const codePage437 = document.getElementById("codePage437");
+  codePage437.innerHTML = convertToCodePage437(number);
   const eightBitColor = document.getElementById("eightBitColor");
   const color = convert8bitToHTMLcolor(number);
   eightBitColor.innerHTML = color; 

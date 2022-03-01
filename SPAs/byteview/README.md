@@ -10,3 +10,4 @@ and handling numberic and character data in
 ## Resources
 
 - [HTMLInputElement: invalid event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event)
+- [Code Page 437](https://cp437.github.io/)
