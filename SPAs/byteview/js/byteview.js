@@ -30,7 +30,7 @@ function convertToBase(num, base) {
 
 function padZeros(numStr, base) {
   let targetLen = null;
-  if (base == 1)  {
+  if (base == 2)  {
     targetLen = 8;
   } else if (base == 8) {
     targetLen = 3;
