@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>It's All Just Bits: Six Ways to View a Byte</title>
+<title>It's All Just Bits: 7 Ways to View a Byte</title>
 <style>
 @import url(css/byteview.css);
 </style>
@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-<h1>It's All Just Bits: Six Ways to View a Byte</h1>
+<h1>It's All Just Bits: 7 Ways to View a Byte</h1>
 </header>
 <main>
 <p>
@@ -24,10 +24,10 @@ bits. You can enter a byte below as an unsigned
 <a href="https://en.wikipedia.org/wiki/Decimal">integer</a> between
 <code>0</code> and <code>255</code>. Clicking the <button>submit</button>
 will then <a href="https://en.wiktionary.org/wiki/render">render</a> those
-bits as <b>signed integer in decimal</b>,
+bits as <b>unsigned decimal</b>, <b>signed decimal</b>,
 <a href="https://en.wikipedia.org/wiki/Binary_number">binary</a>,
 <a href="https://en.wikipedia.org/wiki/Octal">octal</a>, and
-<a href="https://en.wikipedia.org/wiki/Hexadecimal">hexidecimal</a> number, 
+<a href="https://en.wikipedia.org/wiki/Hexadecimal">hexidecimal</a> numbers, 
 as a <a href="https://en.wikipedia.org/wiki/Code_page_437">code page 437</a>
 character, and finally as an
 <a href="https://en.wikipedia.org/wiki/8-bit_color">8-bit color</a>.
@@ -35,8 +35,7 @@ character, and finally as an
 <form action="#">
 <label>
 Enter a byte sized number between 0 and 255:
-<input type="number" id="numberInput" size="4" min="0" max="255"
-oninvalid="alert('Please enter a number between 0 and 255');">
+<input type="number" id="numberInput" size="4" min="0" max="255">
 </label>
 <input type="button" id="inputButton" value="Submit">
 </form>
@@ -64,11 +63,11 @@ oninvalid="alert('Please enter a number between 0 and 255');">
 </tr>
 <tr>
   <td>Code Page 437</td>
-  <td id="codepage437"></td>
+  <td id="codePage437"></td>
 </tr>
 <tr>
   <td>8-bit Color</td>
-  <td id="8bitcolor"></td>
+  <td id="eightBitColor"></td>
 </tr>
 </table>
 </div>

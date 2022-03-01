@@ -1,4 +1,4 @@
-# It's All Just Bits: 6 Ways to View a Byte
+# It's All Just Bits: 7 Ways to View a Byte
 
 In this [SPA](https://en.wikipedia.org/wiki/Single-page_application), I will
 explore both

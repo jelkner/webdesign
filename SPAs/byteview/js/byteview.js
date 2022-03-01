@@ -16,7 +16,21 @@ function addValidation() {
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
 
+function convertToBase(num, base) {
+  if (num == 0 )
+    return "0";
+  let conversion = "";
+  while (num > 0) {
+    conversion = num % base + conversion;
+    num = Math.floor(num / base);
+  }
+  return conversion;
+}
+
 function processButtonClick(e) {
   const number = document.getElementById("numberInput").value;
-  outputP.innerHTML = outStr;
+  const unsigned = document.getElementById("unsigned");
+  unsigned.innerHTML = number;
+  const bin = document.getElementById("bin");
+  bin.innerHTML = convertToBase(number, 2);
 }
