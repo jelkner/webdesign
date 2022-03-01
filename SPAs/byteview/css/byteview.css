@@ -40,3 +40,6 @@ footer {
   margin-top: 1vw;
   font-size: 1.6vw;
 }
+#output {
+  visibility: hidden;
+}
