@@ -35,7 +35,7 @@ function init() {
 function drawSomething() {
   const canvas = document.getElementById("myCanvas");
   const context = canvas.getContext("2d");
-  
+
   context.fillRect(10, 10, 100, 100);
 }
 window.onload = init;
@@ -47,7 +47,10 @@ window.onload = init;
 </header>
 
 <main>
-<canvas id="myCanvas" width="600" height="200"></canvas>
+<canvas id="myCanvas" width="600" height="200">
+Sorry, your old browser doesn't support the canvas element. Time for a new
+browser!
+</canvas>
 </main>
 
 <footer>
