@@ -35,13 +35,31 @@ function init() {
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 
-  drawSomething();
+  const previewButton = document.getElementById("previewButton");
+  previewButton.onclick = previewHandler;
 }
-function drawSomething() {
+function previewHandler() {
+  alert("You clicked me!");
   const canvas = document.getElementById("myCanvas");
   const context = canvas.getContext("2d");
 
-  context.fillRect(10, 10, 100, 100);
+  let selectObj = document.getElementById("shape");
+  let index = selectObj.selectedIndex;
+  let shape = selectObj[index].value;
+
+  if (shape == "squares") {
+    for (let squares = 0; squares < 20; squares++) {
+      drawSquare(canvas, context);
+    }
+  }
+}
+function drawSquare(canvas, context) {
+  let w = Math.floor(Math.random() * 40);
+  let x = Math.floor(Math.random() * canvas.width);
+  let y = Math.floor(Math.random() * canvas.height);
+
+  context.fillStyle = "lightblue";
+  context.fillRect(x, y, w, w);
 }
 window.onload = init;
 </script>
