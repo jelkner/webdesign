@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Canvas Experiment Number 2</title>
+<style>
+h1, footer {
+    text-align: center;
+}
+canvas, form {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+canvas {
+    border: 1px solid #555;
+}
+form {
+    margin-top: 20px;
+}
+footer {
+    margin-top: 30px;
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+</style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  drawSomething();
+}
+function drawSomething() {
+  const canvas = document.getElementById("myCanvas");
+  const context = canvas.getContext("2d");
+
+  context.fillRect(10, 10, 100, 100);
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<header>
+<h1>Canvas Experiment Number 2</h1>
+</header>
+
+<main>
+<canvas id="myCanvas" width="600" height="200">
+Sorry, your old browser doesn't support the canvas element. Time for a new
+browser!
+</canvas>
+<form>
+<p>
+ <label for="backgroundColor">Select background color:</label>
+ <select id="backgroundColor">
+   <option value="white" selected="selected">White</option>
+   <option value="black">Black</option>
+ </select>
+</p><p>
+  <label for="shape">Circles or squares?</label>
+  <select id="shape">
+    <option value="none" selected="selected">Neither</option>
+    <option value="circles">Circles</option>
+    <option value="squares">Squares</option>
+  </select>
+</p><p>
+  <label for="foregroundColor">Select text color:</label>
+  <select id="foregroundColor">
+    <option value="black" selected="selected">Black</option>
+    <option value="white">White</option>
+  </select>
+</p><p>
+  <label for="chants">Pick a recruitment chant:</label>
+  <select id="chants">
+    <option value="tech">You've made the trek. What the heck. Sign up for
+    Arlington Tech!</option>
+    <option value="movinon">Eight grade has come and gone. At ACC you'll find 
+    a new dawn!</option>
+  </select>
+</p><p>
+  <input type="button" id="previewButton" value="Preview">
+</p>
+</form>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
