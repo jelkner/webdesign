@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Background Images</title>
+<title>Background Image</title>
 <style>
-h1, footer {
+header {
+    display: flex;
+}
+h1 {
+    display: inline-box;
+    margin-left: 2vw;
+}
+form {
+    margin-left: 3vw;
+    margin-top: 1.6vw;
+}
+input {
+    margin-left: 3vw;
+}
+main {
+    height: 86vh;
+    width: 96vw;
+    border: 1vw solid #CCC;
+    margin-left: 0.6vw;
+    margin-bottom: 2vh;
+    background-image: url(images/ACC.jpg);
+}
+footer {
     text-align: center;
 }
 footer>a, footer>a:visited {
@@ -23,11 +45,19 @@ function init() {
 }
 window.onload = init;
 </script>
-<script>
-</script>
 </head>
 <body id="theBody">
+<header>
 <h1>Background Images</h1>
+<form>
+ <label for="size">Select background size:</label>
+ <select id="backgroundSize">
+   <option value="cover" selected="selected">cover</option>
+   <option value="contain">contain</option>
+ </select>
+ <input type="button" id="applyStyle" value="Apply">
+</form>
+</header>
 <main>
 </main>
 
