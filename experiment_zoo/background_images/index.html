@@ -47,7 +47,11 @@ function init() {
   applyButton.onclick = applyStyleHandler;
 }
 function applyStyleHandler() {
-  alert("You clicked me!");
+  let selectObj = document.getElementById("backgroundSize");
+  let index = selectObj.selectedIndex;
+  let value = selectObj[index].value;
+
+  alert("You clicked me! And my background-size property value is " + value);
 }
 window.onload = init;
 </script>
@@ -56,7 +60,7 @@ window.onload = init;
 <header>
 <h1>Background Images</h1>
 <form>
- <label for="size">Select background size:</label>
+ <label for="size">background-size:</label>
  <select id="backgroundSize">
    <option value="cover" selected="selected">cover</option>
    <option value="contain">contain</option>
