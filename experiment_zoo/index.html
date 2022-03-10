@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<title>Web Trifecta Experiment Zoo</title>
 <style>
+@import url(zoostyle.css);
+</style>
 <script>
 function init() {
   var loc = window.location.href;
@@ -15,21 +17,27 @@ function init() {
 }
 window.onload = init;
 </script>
-h1, footer {
-    text-align: center;
-}
-footer>a, footer>a:visited {
-    text-decoration: none;
-    color: #555;
-}
-</style>
 </head>
 <body>
-<h1>Title</h1>
+<header>
+<h1>Web Trifecta Experiment Zoo</h1>
+<p>Learn from the Animals</p>
+</header>
+
+<main>
+<p>
+This directory contains a collection of small web pages (the <q>animals</q>
+designed to illustrate ideas in web page design.
+</p>
+
+<h2>CSS Experiments</h2>
+<ul>
+  <li><a href="background_images.html">Background Images</a></li>
+</ul>
+</main>
 
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
 </footer>
 </body>
-</html>

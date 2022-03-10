@@ -1,0 +1,24 @@
+body {
+    margin: 4vw;
+}
+main {
+    padding: 4vw;
+    border: 1px dotted #777;
+}
+header, footer {
+    text-align: center;
+}
+header {
+    margin-bottom: 2vw;
+}
+header>p {
+    font-style: italic;
+}
+footer {
+    margin-top: 1vw;
+}
+a, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #C92; 
+}
