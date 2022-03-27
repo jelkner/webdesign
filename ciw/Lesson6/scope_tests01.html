@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<title>Scope Tests 1</title>
 <style>
 h1, footer {
     text-align: center;
@@ -23,9 +23,30 @@ function init() {
 }
 window.onload = init;
 </script>
+<script>
+function helloWorld1() {
+  myVar1 = "Hello World 1";
+}
+helloWorld1();
+alert(myVar1);
+</script>
+<script>
+var myVar2;
+function helloWorld2() {
+  myVar2 = "Hello World 2";
+}
+alert(myVar2);
+</script>
+<script>
+let myVar3;
+function helloWorld2() {
+  myVar3 = "Hello World 3";
+}
+alert(myVar3);
+</script>
 </head>
 <body>
-<h1>Title</h1>
+<h1>Scope Tests 1</h1>
 
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |

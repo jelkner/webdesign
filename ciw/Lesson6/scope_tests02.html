@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<title>Scope Tests 2</title>
 <style>
 h1, footer {
     text-align: center;
+}
+main {
+    padding: 40px;
+    margin: 40px;
+    border: 1px dotted #555;
 }
 footer>a, footer>a:visited {
     text-decoration: none;
@@ -13,6 +18,14 @@ footer>a, footer>a:visited {
 }
 </style>
 <script>
+function Foo() {
+  console.log("Hi from Foo!");
+}
+
+function Bar() {
+  return "Hi from Bar!";
+}
+
 function init() {
   var loc = window.location.href;
   var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
@@ -20,12 +33,23 @@ function init() {
                         loc + '?profile=css3';
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  document.getElementById("thing1").innerHTML = Foo();
+  document.getElementById("thing2").innerHTML = Bar();
 }
+
 window.onload = init;
 </script>
 </head>
 <body>
-<h1>Title</h1>
+<h1>Scope Tests 2</h1>
+<main>
+<h2>Assorted Things</h2>
+<ul>
+  <li id="thing1"></li>
+  <li id="thing2"></li>
+</ul>
+</main>
 
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
