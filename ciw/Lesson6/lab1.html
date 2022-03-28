@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab 1: Event Handler Examples</title>
+<style>
+h1, footer {
+    text-align: center;
+}
+main {
+    margin: 40px;
+    padding: 40px;
+    border: 1px dotted #555;
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+</style>
+<script>
+function init() {
+  let loc = window.location.href;
+  let HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  let CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+function vote() {
+  let favoriteSport = "Your favorite sport is: ";
+  for (let i = 0; i < document.myform.sports.length; i++) {
+    if (document.myform.sports[i].checked == true) {
+      favoriteSport = favoriteSport + document.myform.sports[i].value;
+    }
+  }
+  if (favoriteSport == "Your favorite sport is: ") {
+    document.getElementById("txt").value = "Choose a sport";
+  } else {
+    document.getElementById("txt").value = favoriteSport;
+    document.getElementById("txt1").value = favoriteSport;
+    document.getElementById("txt2").value = favoriteSport;
+  }
+}
+function upperCase() {
+  let x = document.getElementById("txt").value;
+  document.getElementById("txt").value = x.toUpperCase();
+}
+function SayHello() {
+  alert("Your mouse is over the text!");
+}
+function SayGoodbye() {
+  alert("Your mouse has left the text!");
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<h1>Lab 1: Event Handler Examples</h1>
+
+<main>
+<h2>Vote for your favorite sport:</h2>
+<form name="myform">
+  <p>
+  <input type="radio" name="sports" value="Vollyball">Vollyball<br>
+  <input type="radio" name="sports" value="Ultimate Frizbee">Ultimate
+  Frizbee<br>
+  <input type="radio" name="sports" value="Table Tennis">Table Tennis<br>
+  <input type="radio" name="sports" value="Basketball">Basketball<br>
+  <input type="radio" name="sports" value="Paintball">Paintball<br>
+  <input type="radio" name="sports" value="Segway Polo">Segway Polo
+  </p><p>
+  <input type="button" value="VOTE" onclick="vote()">
+  <input type="reset" value="RESET">
+  </p><p>
+  <input type="text" id="txt" size="40" onblur="upperCase()"> Click in then
+  out!
+  </p><p>
+  <input type="text" id="txt1" size="40" onmouseover="SayHello()"> Hover over
+  this field!
+  </p><p>
+  <input type="text" id="txt2" size="40" onmouseout="SayGoodbye()"> Hover this
+  field then away!
+  </p>
+</form>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
