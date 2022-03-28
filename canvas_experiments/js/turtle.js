@@ -23,7 +23,7 @@ var turtle = {
 // ============================================================================
 
 turtle.logPenStatus = function() {
-  console.log('x=' + this.x + "; y=" + this.y + '; angle = ' + this.angle + '; penDown = ' + this.penDown);
+ console.log(`x={this.x} y={this.y} angle={this.angle} penDown={this.penDown}`);
 };
 
 turtle.forward = function(length) {
