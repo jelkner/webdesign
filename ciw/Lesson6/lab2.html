@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab 2: Creating a User-defined Function in JavaScript</title>
+<style>
+h1, footer {
+    text-align: center;
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+</style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+window.onload = init;
+</script>
+<script>
+/***********************************************
+  Define a function named myFunction().
+  The function displays an alert() when invoked.
+***********************************************/
+</script>
+</head>
+<!-- Add an onload event handler to call the function -->
+<body>
+<h1>Lab 2: Creating a User-defined Function in JavaScript</h1>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
