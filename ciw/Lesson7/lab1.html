@@ -46,8 +46,13 @@ function draw() {
     // Mouth (clockwise)
     ctx.moveTo(390, 250);
     ctx.arc(250, 250, 140, 0, Math.PI, false);
-    ctx.stroke();
     // Left eye
+    ctx.moveTo(200, 200);
+    ctx.arc(180, 200, 20, 0, Math.PI * 2, true);
+    // Right eye
+    ctx.moveTo(320, 200);
+    ctx.arc(300, 200, 20, 0, Math.PI * 2, true);
+    ctx.stroke();
   }
 }
 window.onload = init;
