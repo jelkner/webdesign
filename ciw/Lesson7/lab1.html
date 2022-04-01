@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Canvas API Example</title>
+<style>
+h1, footer {
+  text-align: center;
+}
+main {
+  padding: 40px;
+  margin: 40px;
+  border: 1px dotted #555;
+}
+main>canvas {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #555;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}
+</style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+  draw();
+}
+function draw() {
+  const canvas = document.getElementById("myCanvas");
+  if (canvas.getContext) {
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.fillStyle = "yellow";
+    ctx.arc(250, 250, 200, 0, Math.PI * 2, true);
+    ctx.fill();
+  }
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<h1>HTML5 Canvas API Example</h1>
+<main>
+<canvas id="myCanvas" width="500" height="500">
+Your browser does not support the canvas element.
+</canvas>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
