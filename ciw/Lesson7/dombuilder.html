@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOM Builder</title>
+<style>
+header {
+  margin: 1vw;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+}
+header>h1 {
+  width: 60%;
+  color: #C92;
+  font-size: 4vw;
+}
+header>p>button {
+  padding: 8px;
+  font-size: 1.5vw;
+}
+main {
+  margin: 1.4vw;
+  padding: 1.4vw;
+  border: 1px dotted #777;
+}
+main>section>h2 {
+  text-align: center;
+  font-size: 3vw;
+}
+footer {
+  text-align: center;
+  margin-top: 2vw;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}
+</style>
+<script>
+let toDoItem = 0;
+const itemList = {
+  1: "First New Section",
+  2: "Second New Section"
+};
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+function addSection(heading) {
+  /* See:
+  https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement */
+  let main = document.getElementById("whereTheActionIs");
+  const newSection = document.createElement("section"); 
+  const newHeading= document.createElement("h2"); 
+  const newTitle = document.createTextNode(heading);
+  newHeading.appendChild(newTitle);
+  newSection.appendChild(newHeading);
+  main.appendChild(newSection);
+}
+function handleButtonClick() {
+  addSection(itemList[++toDoItem]);
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<header>
+<h1>DOM Builder</h1>
+<p>
+<button onclick="handleButtonClick()">Click Me to Build the DOM</button>
+</p>
+</header>
+<main id="whereTheActionIs"></main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
