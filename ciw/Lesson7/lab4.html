@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Choose Two</title>
+<style>
+h1, footer {
+  text-align: center;
+}
+h1 {
+  font-size: 2.4vw;
+}
+h2 {
+  font-size: 1.5vw;
+}
+main {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  padding: 2vw;
+  border: 1px dotted #777;
+}
+footer {
+  margin-top: 1vw;
+  font-size: 0.9vw;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}
+</style>
+<script>
+function handleFileSelect(e) {
+  let files = e.target.files;
+  let output = "";
+  for (let i = 0, numFiles = files.length; i < numFiles; ++i) {
+    let name = escape(files[i].name);
+    let type = files[i].type || "n/a";
+    let size = files[i].size;
+    let lastModDate;
+    alert(files[i].lastModified);
+    if (files[i].lastModified) {
+      lastModDate = new Date(files[i].lastModified);
+    } else {
+      lastModDate = "n/a"; 
+    };
+    output += "<li><strong>" + name + "</strong> (" + type + ") - ";
+    output += size + " bytes, last modified: " + lastModDate + "</li>";
+  }
+  let outputElem = document.getElementById("writeStuffHere");
+  outputElem.innerHTML = "<ul>" + output + "</ul>";
+}
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+  document.getElementById("files").addEventListener(
+    "change", handleFileSelect
+  );
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<h1>Choose Two</h1>
+<main>
+<p><b>Select two files:</b>
+<input type="file" id="files" name="files[]" multiple>
+<output id="writeStuffHere"></output>
+</p>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
