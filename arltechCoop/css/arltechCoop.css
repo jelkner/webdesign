@@ -48,7 +48,11 @@ nav {
   margin-right: 10px;
   opacity: 0.8;
 }
+audio {
+  width: 100px;
+}
 section {
+  padding-top: 20px;
   background: url(globe.png); 
   background-repeat: no-repeat;
   background-size: contain;
