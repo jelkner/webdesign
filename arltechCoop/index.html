@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="Description" content="Sample Website for learning Web Design">
 <title>uCorp</title>
-<link rel="stylesheet"  type="text/css" href="css/uCorp.css">
+<style>
+@import url(css/arltechCoop.css);
+</style>
 <script>
 function init() {
   var loc = window.location.href;
@@ -20,25 +22,28 @@ window.onload = init;
 <body>
 
 <header>
-<img src="css/uCorp-logo-3.png" alt="uCorp logo">
-<div class="floatright" id="drop-menu">
-Choose a search engine
-<ul class="sub-menu">
-<li><a href="http://www.bing.com">Bing</a></li>
-<li><a href="http://www.google.com"> Google</a></li>
-<li><a href="http://www.yahoo.com">Yahoo!</a></li>
-</ul>
+<h1>arltechCoop</h1>
+<div id="drop-menu" class="floatright">
+  Choose a search engine
+  <ul class="sub-menu">
+    <li><a href="http://www.bing.com">Bing</a></li>
+    <li><a href="http://www.google.com"> Google</a></li>
+    <li><a href="http://www.yahoo.com">Yahoo!</a></li>
+  </ul>
 </div>
 </header>
 
 <nav>
-<p><a class="navlinks" href="http://www.ucorp.biz/course_about.php">About Course</a></p>
-<p><a class="navlinks" href="http://www.ucorp.biz/technology.php">Technology</a></p>
+<p>
+<a class="navlinks" href="http://www.ucorp.biz/course_about.php">About Course
+</a></p>
+<p><a class="navlinks" href="http://www.ucorp.biz/technology.php">Technology</a>
+</p>
 </nav> 
 
 <section>
 <article>
-<h1>What Makes Us Tick!</h1>
+<h2>What Makes Us Tick!</h2>
 <img class="floatright" id="img-rotate" src="css/banner.jpg" height="114" alt="Speakers"/>
 Habitat for Humanity believes that every man, woman and child should have a
 decent, safe aAt uCorp, we believe world-class audio experiences should be
@@ -52,7 +57,7 @@ performance for the price.
 </article> 
 
 <article>
-<h1>Our Mission</h1>
+<h2>Our Mission</h2>
 <video class="floatright" id="video-rotate" height="150" class="center" controls="controls">
 <source src="css/uCorp%20Tour.mp4" type="video/mp4" />
 Your browser does not support the HTML5 video element.
@@ -63,7 +68,7 @@ dictumst risus ut ac porta, urna ac vel, a ut dis!
 </article>
 
 <article>
-<h1>Technology</h1>
+<h2>Technology</h2>
 The audio industry is literally driven by loudspeakers. They’re the final
 components in the signal chain, and the ones most likely to influence the
 overall sonic quality of the source material.
