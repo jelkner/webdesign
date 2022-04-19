@@ -1,7 +1,4 @@
-@font-face {
-  font-family: oregonfont;
-  src: url('oregon book.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 article {	
   padding: 10px;
 }
@@ -53,7 +50,7 @@ audio {
 }
 section {
   padding-top: 20px;
-  background: url(globe.png); 
+  background: url(../images/connected_world.png); 
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -90,7 +87,7 @@ section {
   background: #add8e6;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #888888;
-  font-family: oregonfont;
+  font-family: 'Signika', sans-serif;
   font-weight: bold;
   font-size: 85%;
   color: #0000A0;
@@ -100,16 +97,6 @@ section {
 }
 #drop-menu:hover .sub-menu {
   display: inline-block;
-}
-#img-rotate {
-  z-index: -1;
-  transform: rotate(345deg);
-}
-#logo-rotate {
-  transform: rotateY(180deg);
-}
-#video-rotate {
-  transform:rotate(15deg);
 }
 .sub-menu {
   display: none;
