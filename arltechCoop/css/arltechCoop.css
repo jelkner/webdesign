@@ -3,11 +3,15 @@ article {
   padding: 10px;
 }
 body {
-  font-family: oregonfont;
-  font-size: 85%;
+  font-family: 'Signika', sans-serif;
+  font-size: 100%;
   border-style: solid;
   border-width: 5px;
-  border-color: #d8d8d8;
+  border-color: #D8D8D8;
+}
+a, a:visited {
+  text-decoration: none;
+  color: #A36A00;
 }
 footer {
   font-size: 80%;
@@ -15,7 +19,7 @@ footer {
   clear: both;
   border-top-style: solid;
   border-top-width: 5px;
-  border-top-color: #d8d8d8;
+  border-color: #D8D8D8;
   margin-top: 0;
   padding: 0;
 }
@@ -34,19 +38,16 @@ h2 {
 header {
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-bottom-color: #d8d8d8;
+  border-color: #D8D8D8;
 }
 nav {
-  background: #d8d8d8; 
+  background-color: #D8D8D8;
   font-weight: bold;
   float: left;
   height: 420px;
   padding-right: 24px;
   margin-right: 10px;
   opacity: 0.8;
-}
-audio {
-  width: 400px;
 }
 section {
   padding-top: 20px;
@@ -63,7 +64,7 @@ section {
   display: block;
   border: 2px solid #a1a1a1;
   padding: 2px 5px; 
-  background: #add8e6;
+  background: #FFD580;
   border-radius: 5px;
   text-decoration: none;
   box-shadow: 5px 5px 5px #888888;
@@ -81,16 +82,16 @@ section {
   margin-right: 30px;
   width: 150px;
   cursor: pointer;
-  border: 2px solid #a1a1a1;
+  border: 2px solid #A1A1A1;
   height: 20px;  
   max-height: 20px; 
-  background: #add8e6;
+  background: #FFD580;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #888888;
   font-family: 'Signika', sans-serif;
   font-weight: bold;
   font-size: 85%;
-  color: #0000A0;
+  color: #A36A00;
 }
 #drop-menu:hover {
   border: 3px solid #bababa;
@@ -109,11 +110,11 @@ section {
 .sub-menu li {
   list-style-type: none;
   display: block;
-  border: 2px solid #add8e6;
+  border: 2px solid #FFD580;
   padding: 2px 5px; 
-  background: #d8d8d8;
+  background: #D8D8D8;
   border-radius: 5px;
 }
 .sub-menu li:hover {
-  border: 3px solid #bababa;
+  border: 3px solid #BABABA;
 }
