@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
-article {	
-  padding: 10px;
-}
 body {
   font-family: 'Signika', sans-serif;
   font-size: 100%;
@@ -55,6 +52,9 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
 }
+article {	
+  padding: 10px;
+}
 .floatright {
   float: right;
   clear: right;
@@ -73,7 +73,7 @@ section {
 .searchbox {
   text-align: right;
 }
-#drop-menu {
+#drop-menu, #homelink {
   display: inline-block;
   text-align: center;
   padding: 5px;
@@ -93,8 +93,8 @@ section {
   font-size: 85%;
   color: #A36A00;
 }
-#drop-menu:hover {
-  border: 3px solid #bababa;
+#drop-menu:hover, #homelink:hover {
+  border: 3px solid #BABABA;
 }
 #drop-menu:hover .sub-menu {
   display: inline-block;
