@@ -11,7 +11,8 @@ function add_navigation_links() {
   let navLinks = ""
   let navLinkParts = [
     ["about.html", "About arlTechCoop"],
-    ["tech.html", "Tech We Use"]
+    ["tech.html", "Tech We Use"],
+    ["signup.html", "Sign Up Form"]
   ];
   for (let i = 0; i < navLinkParts.length; i++) {
     navLinks += '<p><a class="navlinks" href="' + navLinkParts[i][0];

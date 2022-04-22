@@ -25,12 +25,19 @@ h1 {
   text-shadow: 3px 3px 3px #888888;
   padding: 3px;
   margin-left: 15px;
-  font-size: xx-large;
+  font-size: 2.4vw;
 }
-h2 {
+h2, h3 {
   text-shadow: 3px 3px 3px #888888;
   margin-top: 5px; 
   margin-bottom: 0px; 
+}
+h2 {
+  font-size: 1.8vw;
+}
+
+h3 {
+  font-size: 1.4vw;
 }
 header {
   border-bottom-style: solid;
