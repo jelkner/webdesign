@@ -3,7 +3,7 @@ body {
   font-family: 'Signika', sans-serif;
   font-size: 100%;
   border-style: solid;
-  border-width: 5px;
+  border-width: 0.4vw;
   border-color: #D8D8D8;
 }
 a, a:visited {
@@ -11,24 +11,24 @@ a, a:visited {
   color: #A36A00;
 }
 footer {
-  font-size: 80%;
+  font-size: 0.8vw;
   text-align: center;
   clear: both;
   border-top-style: solid;
-  border-top-width: 5px;
+  border-top-width: 0.4vw;
   border-color: #D8D8D8;
   margin-top: 0;
   padding: 0;
 }
 h1 {
   display: inline-block;
-  text-shadow: 3px 3px 3px #888888;
-  padding: 3px;
-  margin-left: 15px;
+  text-shadow: 0.2vw 0.2vw 0.2vw #888888;
+  padding: 0.3vw;
+  margin-left: 0.5vw;
   font-size: 2.4vw;
 }
 h2, h3 {
-  text-shadow: 3px 3px 3px #888888;
+  text-shadow: 0.2vw 0.2vw 0.2vw #888888;
   margin-top: 5px; 
   margin-bottom: 0px; 
 }
@@ -48,16 +48,16 @@ nav {
   background-color: #D8D8D8;
   font-weight: bold;
   float: left;
-  height: 420px;
-  padding-right: 24px;
+  height: 35vw;
+  padding-right: 0.4vw;
   margin-right: 10px;
   opacity: 0.8;
 }
 section {
-  padding-top: 20px;
+  padding-top: 0.3vw;
   background: url(../images/connected_world.png); 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 20vw;
 }
 article {	
   padding: 10px;
