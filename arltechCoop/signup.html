@@ -39,8 +39,34 @@ window.onload = init;
 <input type="text" name="lastname" id="last">
 </p>
 <p>
+<label for="email">Email: </label>
+<input type="email" name="emailaddress" id="email">
+</p>
+<p>
 <label for="db">Date of birth: </label>
 <input type="date" name="dob" id="db">
+</p>
+<p>
+<label for="num">Age of member: </label>
+<input type="range" name="age" min="12" max="22" id="num">
+</p>
+<label for="cont">Your continent: </label>
+<input list="continents" name="continent" id="cont">
+<datalist id="continents">
+  <option>North America</option>
+  <option>South America</option>
+  <option>Africa</option>
+  <option>Asia</option>
+  <option>Europe</option>
+  <option>Australia</option>
+  <option>Antarctica</option>
+</datalist>
+</p>
+<p>
+<label for="join">Why do you want to join?</label><br>
+<textarea name="reason"
+          placeholder="I want to join because..." maxlength="140" rows="3"
+          cols="30" id="join"></textarea>
 </p>
 </form>
 
