@@ -1,5 +1,11 @@
-/* STYLE SHEET FOR INDEX.HTML */
-
+body {
+  font-size: 80%;
+  font-family: arial, helvetica, geneva, sans-serif;
+}
+footer {
+  font-size: 80%;
+  text-align: center;
+}
 h1 {
   font-family: arial, helvetica, geneva, sans-serif;
 }
