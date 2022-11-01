@@ -1,0 +1,71 @@
+.year {
+  margin: 96px auto;
+  width: 960px;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  display: flex;
+  background: #FFF;
+  box-shadow: 0 10px 50px -15px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.year:before {
+  position: absolute;
+  content: attr(data-year);
+  color: #E0E0E0;
+  top: -60px;
+  left: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.year ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0 1px;
+  list-style: none;
+  flex: 1;
+  position: relative;
+}
+.year ul:before {
+  position: absolute;
+  content: attr(data-month);
+  color: transparent;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  transform-origin: 0 100%;
+  transform: rotate(90deg) translateX(-20px) translateY(0px);
+  top: 0px;
+  left: 0px;
+}
+.year ul:first-child {
+  margin-left: 0;
+}
+.year ul:last-child {
+  margin-right: 0;
+}
+
+.year ul li {
+  padding: 0;
+  margin: 0;
+  height: 22px;
+  box-shadow: inset 0 0 0 1px #f0f0f0;
+  background: #F8F8F8;
+}
+.year ul li:before {
+  content: attr(data-date);
+  color: transparent;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  text-align: right;
+  right: 2px;
+  position: absolute;
+  line-height: 24px;
+  font-size: 10px;
+}
+.year ul li[data-day="0"], .year ul li[data-day="6"] {
+  background: #EEEEEE;
+  box-shadow: inset 0 0 0 1px #E0E0E0;
+}
