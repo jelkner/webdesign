@@ -9,3 +9,4 @@ used on [our website](https://ict.gctaa.net/).
 
 * [17+ Beautiful CSS calendars](https://alvarotrigo.com/blog/css-calendar/)
 * [Jack Ducasse's JS calendar](https://github.com/jackducasse/caleandar)
+* [How TO - CSS Calendar](https://www.w3schools.com/howto/howto_css_calendar.asp)
