@@ -41,7 +41,8 @@ footer>a, footer>a:visited {
 let toDoItem = 0;
 const itemList = {
   1: "First New Section",
-  2: "Second New Section"
+  2: "Second New Section",
+  3: "Third New Section"
 };
 function init() {
   var loc = window.location.href;
@@ -63,7 +64,11 @@ function addSection(heading) {
   main.appendChild(newSection);
 }
 function handleButtonClick() {
-  addSection(itemList[++toDoItem]);
+  if (toDoItem < 3) {
+    addSection(itemList[++toDoItem]);
+  } else {
+    addSection("New Section Number " + ++toDoItem);
+  }
 }
 window.onload = init;
 </script>
