@@ -1,0 +1,29 @@
+body {
+  font-family: Tahoma;
+}
+#calendar {
+  width: 100%;
+}
+#calendar tr, #calendar tbody {
+  width: 100%;
+}
+#calendar td, #calendar th {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+#calendar .weekdays {
+  background: #8e352e;  
+}
+#calendar .weekdays th {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 20px;
+  border: none !important;
+  padding: 10px 6px;
+  color: #fff;
+  font-size: 13px;
+}
+#calendar td {
+  min-height: 180px;
+}
