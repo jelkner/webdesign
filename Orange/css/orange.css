@@ -1,0 +1,64 @@
+/* STYLE SHEET FOR INDEX.HTML */
+@font-face {
+  font-family: 'Maiden Orange', cursive;
+  src: url("../fonts/MaidenOrange-Regular.ttf");
+}
+article {	
+  padding: 10px;
+}
+body {
+  font-family: 'Maiden Orange';
+  font-size: 85%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #D8D8D8;
+}
+footer {
+  font-size: 80%;
+  text-align: center;
+  clear: both;
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-top-color: #D8D8D8;
+  margin-top: 0;
+  padding: 0;
+}
+h1 {
+  text-shadow: 3px 3px 3px #888888;
+  margin-top: 5px; 
+  margin-bottom: 0px; 
+}
+header {
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #D8D8D8;
+  background-color: #FD8A3E;
+}
+nav {
+  background: #F8E8D8; 
+  font-weight: bold;
+  float: left;
+  height: 420px;
+  padding-right: 24px;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+section {
+  background-image: url("../media/OrangeSlice.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.floatright {
+  float: right;
+  clear: right;
+  margin: 10px;
+}
+.navlinks {
+  display: block;
+  border: 2px solid #A1A1A1;
+  padding: 2px 5px; 
+  background: #FFD580;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px #888888;
+}

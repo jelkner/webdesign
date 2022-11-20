@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="Description" content="Sample Website for learning HTML5 and CSS3">
+<link rel="stylesheet"  type="text/css" href="css/orange.css">
+<title>Orange</title>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<header>
+<img src="media/TheColorOrangeLogo.png" alt="Orange logo">
+</header>
+<nav>
+<p>
+<a class="navlinks" href="https://en.wikipedia.org/wiki/Orange_(colour)">About
+Orange</a></p>
+<p>
+<a class="navlinks" href="https://en.wikipedia.org/wiki/Orange_(fruit)">About
+Oranges</a></p>
+</nav> 
+
+<section>
+
+<article>
+<h1>Why People Love Orange!</h1>
+<img class="floatright" src="media/banner.jpg" height="114" alt="Oranges"/>
+Orange is simply the best color there is.  It is warm, sunny, and bright.
+Associated with amusement, the unconventional, warmth, fire, energy, activity,
+taste and aroma, it is an important symbolic color in Buddism and Hinduism.
+Orange makes you feel happy. It is the color of pumkins and Halloween.
+</article> 
+
+<article>
+<h1>Our Mission</h1>
+<video class="floatright" height="150" controls="controls">
+<source src="media/TheColorOrange.webm" type="video/webm">
+Your browser does not support the HTML5 video element.
+</video>
+Our mission is to share our love of the color orange. Here you'll find links
+to all kinds of things that celebrate both the amazing color, and the sweet,
+delicious fruit from which the color gets its name.
+</article>
+
+<article>
+<h1>Not Just a Great Color</h1>
+Before is was a color, orange was a fruit, a sweet, delicious fruit high in
+vitamin C and ready to be squeezed into a refreshing breakfast drink.
+<p>
+<audio controls="controls">
+<source src="media/orange.ogg" type="audio/ogg">
+Your browser does not support the HTML5 audio element.
+</audio>
+</p>
+</article>
+
+</section> 
+
+<footer>
+<p>
+VERIFY US ON:
+</p>
+<p>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</p>
+<p>
+Copyleft &copy; All rights reversed by The Color Orange
+</p>
+</footer>
+
+</body>
+</html>
