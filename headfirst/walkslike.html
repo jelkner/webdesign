@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Walks Like</title>
+<style>
+@import url(mystyle.css);
+</style>
+<script>
+function handleWalksLike() {
+  if (walksLike == "dog") {
+    soundsLike.innerHTML = "Woof! Woof!";
+  } else if (walksLike == "duck") {
+    soundsLike.innerHTML = "Quack, Quack";
+  } else {
+    soundsLike.innerHTML = "Crickets...";
+  }
+}
+
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+
+window.onload = init;
+</script>
+</head>
+<body>
+<header>
+<h1>Walks Like</h1>
+</header>
+<main>
+<form action=
+</main>
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
