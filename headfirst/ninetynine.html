@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Ninety-nine Cans of ...</title>
+<title>Ninety-nine Cans of Energy Drink</title>
 <style>
 @import url(mystyle.css);
+@font-face {
+  font-family: "NerkoOne-Regular";
+  src: url(fonts/NerkoOne-Regular.ttf);
+}
+body {
+  font-family: 'NerkoOne-Regular', sans-serif;
+}
+h1 {
+  font-size: 3.5vw;
+}
+#song>p {
+  text-align: center;
+  font-size: 2.5vw;
+}
 </style>
 <script>
 function init() {
@@ -21,9 +35,9 @@ window.onload = init;
 </head>
 <body>
 <header>
-<h1>Ninety-nine Cans of ...</h1>
+<h1>Ninety-nine Cans of Energy Drink</h1>
 </header>
-<main id="lyrics">
+<main id="song">
 
 </main>
 <footer>
@@ -31,19 +45,26 @@ window.onload = init;
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
 </footer>
 <script>
-var drink = "Energy Drink";
-var lyrics = "";
-var cans = 99;
+let drink = "Energy Drink";
+let lyrics = "";
+let cans = 99;
 
-while (cans > 0) {
-  lyrics += "<p>
-  lyrics += cans + "cans of " + drink + " on the wall <br>";
-  lyrics += cans + "cans of " + drink + " on the wall <br>";
-  lyrics += "Take one down, pass it around,<br>";
-  lyrics += "</p>
+while (cans > 1) {
+  lyrics += "<p>";
+  lyrics += cans + " cans of " + drink + " on the wall <br>";
+  lyrics += cans + " cans of " + drink + " on the wall <br>";
+  lyrics += "Take one down, pass it around,";
+  lyrics += "</p>";
   cans--;
 }
-document.getElementById("lyrics").innerHTML = lyrics;
+lyrics += "<p>";
+lyrics += cans + " can of " + drink + " on the wall <br>";
+lyrics += cans + " can of " + drink + " on the wall <br>";
+lyrics += "Take one down, pass it around, no more cans of ";
+lyrics += drink + " on the wall :-(";
+lyrics += "</p>";
+
+document.getElementById("song").innerHTML = lyrics;
 </script>
 </body>
 </html>
