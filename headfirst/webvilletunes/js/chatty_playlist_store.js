@@ -1,10 +1,10 @@
 function save(item) {
   alert("playlist_store save function called.");
   var playlistArray = getStoreArray("playlist");
-  alert("Before push new item: " + JSON.stringify(playlist_Array));
+  alert("Before push new item: " + JSON.stringify(playlistArray));
   playlistArray.push(item);
   localStorage.setItem("playlist", JSON.stringify(playlistArray));
-  alert("After push new item: " + JSON.stringify(playlist_Array));
+  alert("After push new item: " + JSON.stringify(playlistArray));
 }
 
 function loadPlaylist() {
