@@ -22,7 +22,7 @@ ul#right {
 }
 </style>
 <script>
-function choose_groups() {
+function chooseGroups() {
   students = [
     {
       "name": "Alex",
@@ -121,7 +121,14 @@ function choose_groups() {
     }
   ]
   groups = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  theList = document.getElementById('A');
+  oneStudent = "<li><a href=\"" + students[0].website + "\">";
+  oneStudent += students[0].name + "</a></li>";
+  theList.innerHTML = oneStudent;
 }
+
+window.onload = chooseGroups;
 </script>
 </head>
 <body>
@@ -166,14 +173,6 @@ function choose_groups() {
 </ul>
 </div>
 </section>
-
-<hr>
-<h3>Special Projects</h3>
-<ul>
-<li><a href="https://sheel2007.github.io/Vista-Website/">Vista Home Owners
-Association</a> (<a href="https://github.com/Sheel2007/Vista-Website">repo</a>)
-</li>
-</ul>
 
 <footer>
 <hr>
