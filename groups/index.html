@@ -138,27 +138,32 @@ function createStudentIndices() {
 function chooseGroups() {
   let groups = ['A', 'B', 'C', 'D', 'E', 'F'];
   let groupIndex = 0;
+  // Number of groups of 3 needed to have only groups of 3 or 4
   let threeGroupCount = 4 - (students.length % 4);
   let sIndices = createStudentIndices();
 
   while (sIndices.length > 0) { 
     let theList = document.getElementById(groups[groupIndex]);
-    let studentsStr = "";
-    let groupSize = threeGroupCount == 0 ? 4 : 3;
-    threeGroupCount = threeGroupCount == 0 ? 0 : --threeGroupCount;
+    let strOfStudents = "";
+    let groupSize = 0;
+    if (threeGroupCount > 0) {
+      groupSize = 3;
+      threeGroupCount--;
+    } else {
+      groupSize = 4;
+    };
 
-    for (let s = 0; s < groupSize; s++) {
+    for (let i = 0; i < groupSize; i++) {
       let student = getStudentAndRemoveFromList(sIndices);
       let studentStr = "<li><a href=\"" + student.website + "\">";
       studentStr += student.name + "</a></li>\n";
-      studentsStr += studentStr;
+      strOfStudents += studentStr;
     }
-    theList.innerHTML = studentsStr;
+    theList.innerHTML = strOfStudents;
+
+    // Reset values for next group
     studentsStr = "";
-    if (groupIndex < groups.length) {
-      groupIndex++;
-    }
-    theList = document.getElementById(groups[groupIndex]);
+    groupIndex++;
   }
 }
 
