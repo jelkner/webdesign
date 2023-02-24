@@ -23,7 +23,7 @@ ul#right {
 </style>
 <script>
 function chooseGroups() {
-  students = [
+  let students = [
     {
       "name": "Alex",
       "website": "https://potatoaqt.github.io/website",
@@ -120,12 +120,30 @@ function chooseGroups() {
       "repo": "https://github.com/kk207school/Website"
     }
   ]
-  groups = ['A', 'B', 'C', 'D', 'E', 'F'];
+  let groups = ['A', 'B', 'C', 'D', 'E', 'F'];
+  let groupIndex = 0;
+  let threeGroupCount = students.length % 4;
+  let studentNum = 0;
 
-  theList = document.getElementById('A');
-  oneStudent = "<li><a href=\"" + students[0].website + "\">";
-  oneStudent += students[0].name + "</a></li>";
-  theList.innerHTML = oneStudent;
+  while (studentNum < students.length) { 
+    let studentsStr = "";
+    let theList = document.getElementById(groups[groupIndex]);
+    let groupSize = threeGroupCount == 0 ? 4 : 3;
+    threeGroupCount--;
+
+    for (let s = 0; s < groupSize; s++) {
+      let oneStudent = "<li><a href=\"" + students[studentNum].website + "\">";
+      oneStudent += students[studentNum].name + "</a></li>\n";
+      studentsStr += oneStudent;
+      studentNum++;
+    }
+    theList.innerHTML = studentsStr;
+    studentsStr = "";
+    groupIndex++;
+    console.log(groupIndex);
+    theList = document.getElementById(groups[groupIndex]);
+    console.log(theList);
+  }
 }
 
 window.onload = chooseGroups;
