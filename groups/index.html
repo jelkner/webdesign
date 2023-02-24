@@ -22,127 +22,143 @@ ul#right {
 }
 </style>
 <script>
+const students = [
+  {
+    "name": "Alex",
+    "website": "https://potatoaqt.github.io/website",
+    "repo": "https://github.com/potatoaqt/website"
+  },
+  {
+    "name": "Justo",
+    "website": "https://jmatiaslo.github.io/website",
+    "repo": "https://github.com/jmatiaslo/website"
+  },
+  {
+    "name": "Ana",
+    "website": "https://anc60627.github.io/website",
+    "repo": "https://github.com/anc60627/website"
+  },
+  {
+    "name": "Amelie",
+    "website": "https://acohrssen.github.io/website",
+    "repo": "https://github.com/acohrssen/website"
+  },
+  {
+    "name": "Ryan",
+    "website": "https://RyanC112.github.io/website",
+    "repo": "https://github.com/RyanC112/website"
+  },
+  {
+    "name": "Allesia",
+    "website": "https://acrisafulli.github.io/website",
+    "repo": "https://github.com/acrisafulli/website"
+  },
+  {
+    "name": "Tadashi",
+    "website": "https://TadashiDodgeCharger.github.io/website",
+    "repo": "https://github.com/TadashiDodgeCharger/website"
+  },
+  {
+    "name": "Lorn",
+    "website": "https://lornguzman500.github.io/itd210",
+    "repo": "https://github.com/lornguzman500/itd210"
+  },
+  {
+    "name": "Ari",
+    "website": "https://ariiyy.github.io/website",
+    "repo": "https://github.com/ariiyy/website"
+  },
+  {
+    "name": "Anna L.",
+    "website": "https://annaban12.github.io/Website",
+    "repo": "https://github.com/annaban12/Website"
+  },
+  {
+    "name": "Annie",
+    "website": "https://annalitwiller.github.io/Website",
+    "repo": "https://github.com/annalitwiller/Website"
+  },
+  {
+    "name": "Sean",
+    "website": "https://smemon13.github.io/website",
+    "repo": "https://github.com/smemon13/website"
+  },
+  {
+    "name": "Julian",
+    "website": "https://JulianMolina09.github.io/website",
+    "repo": "https://github.com/JulianMolina09/website",
+  },
+  {
+    "name": "Deyvi",
+    "website": "https://deyuman.github.io/website",
+    "repo": "https://github.com/deyuman/website"
+  },
+  {
+    "name": "Jy'Den",
+    "website": "https://jydenn.github.io/website",
+    "repo": "https://github.com/jydenn/website"
+  },
+  {
+    "name": "Jamethiel",
+    "website": "https://jamethielR.github.io/class_website",
+    "repo": "https://github.com/JamethielR/class_website"
+  },
+  {
+    "name": "Joseph",
+    "website": "https://Origin-24.github.io/website",
+    "repo": "https://github.com/Origin-24/website"
+  },
+  {
+    "name": "Avery",
+    "website": "https://ColemakDH.github.io/website",
+    "repo": "https://github.com/ColemakDH/website"
+  },
+  {
+    "name": "Kai",
+    "website": "https://kk207school.github.io/Website",
+    "repo": "https://github.com/kk207school/Website"
+  }
+];
+
+function getStudentAndRemoveFromList(numList) {
+  let index = Math.floor(Math.random() * numList.length);
+  let studentIndex = numList[index];
+  numList.splice(index, 1);
+  return students[studentIndex];  
+}
+
+function createStudentIndices() {
+  let studentIndices = [];
+  for (let num = 0; num < students.length; num++) {
+    studentIndices.push(num);
+  }
+  return studentIndices;
+}
+
 function chooseGroups() {
-  let students = [
-    {
-      "name": "Alex",
-      "website": "https://potatoaqt.github.io/website",
-      "repo": "https://github.com/potatoaqt/website"
-    },
-    {
-      "name": "Justo",
-      "website": "https://jmatiaslo.github.io/website",
-      "repo": "https://github.com/jmatiaslo/website"
-    },
-    {
-      "name": "Ana",
-      "website": "https://anc60627.github.io/website",
-      "repo": "https://github.com/anc60627/website"
-    },
-    {
-      "name": "Amelie",
-      "website": "https://acohrssen.github.io/website",
-      "repo": "https://github.com/acohrssen/website"
-    },
-    {
-      "name": "Ryan",
-      "website": "https://RyanC112.github.io/website",
-      "repo": "https://github.com/RyanC112/website"
-    },
-    {
-      "name": "Allesia",
-      "website": "https://acrisafulli.github.io/website",
-      "repo": "https://github.com/acrisafulli/website"
-    },
-    {
-      "name": "Tadashi",
-      "website": "https://TadashiDodgeCharger.github.io/website",
-      "repo": "https://github.com/TadashiDodgeCharger/website"
-    },
-    {
-      "name": "Lorn",
-      "website": "https://lornguzman500.github.io/itd210",
-      "repo": "https://github.com/lornguzman500/itd210"
-    },
-    {
-      "name": "Ari",
-      "website": "https://ariiyy.github.io/website",
-      "repo": "https://github.com/ariiyy/website"
-    },
-    {
-      "name": "Anna L.",
-      "website": "https://annaban12.github.io/Website",
-      "repo": "https://github.com/annaban12/Website"
-    },
-    {
-      "name": "Annie",
-      "website": "https://annalitwiller.github.io/Website",
-      "repo": "https://github.com/annalitwiller/Website"
-    },
-    {
-      "name": "Sean",
-      "website": "https://smemon13.github.io/website",
-      "repo": "https://github.com/smemon13/website"
-    },
-    {
-      "name": "Julian",
-      "website": "https://JulianMolina09.github.io/website",
-      "repo": "https://github.com/JulianMolina09/website",
-    },
-    {
-      "name": "Deyvi",
-      "website": "https://deyuman.github.io/website",
-      "repo": "https://github.com/deyuman/website"
-    },
-    {
-      "name": "Jy'Den",
-      "website": "https://jydenn.github.io/website",
-      "repo": "https://github.com/jydenn/website"
-    },
-    {
-      "name": "Jamethiel",
-      "website": "https://jamethielR.github.io/class_website",
-      "repo": "https://github.com/JamethielR/class_website"
-    },
-    {
-      "name": "Joseph",
-      "website": "https://Origin-24.github.io/website",
-      "repo": "https://github.com/Origin-24/website"
-    },
-    {
-      "name": "Avery",
-      "website": "https://ColemakDH.github.io/website",
-      "repo": "https://github.com/ColemakDH/website"
-    },
-    {
-      "name": "Kai",
-      "website": "https://kk207school.github.io/Website",
-      "repo": "https://github.com/kk207school/Website"
-    }
-  ]
   let groups = ['A', 'B', 'C', 'D', 'E', 'F'];
   let groupIndex = 0;
-  let threeGroupCount = students.length % 4;
-  let studentNum = 0;
+  let threeGroupCount = 4 - (students.length % 4);
+  let sIndices = createStudentIndices();
 
-  while (studentNum < students.length) { 
-    let studentsStr = "";
+  while (sIndices.length > 0) { 
     let theList = document.getElementById(groups[groupIndex]);
+    let studentsStr = "";
     let groupSize = threeGroupCount == 0 ? 4 : 3;
-    threeGroupCount--;
+    threeGroupCount = threeGroupCount == 0 ? 0 : --threeGroupCount;
 
     for (let s = 0; s < groupSize; s++) {
-      let oneStudent = "<li><a href=\"" + students[studentNum].website + "\">";
-      oneStudent += students[studentNum].name + "</a></li>\n";
-      studentsStr += oneStudent;
-      studentNum++;
+      let student = getStudentAndRemoveFromList(sIndices);
+      let studentStr = "<li><a href=\"" + student.website + "\">";
+      studentStr += student.name + "</a></li>\n";
+      studentsStr += studentStr;
     }
     theList.innerHTML = studentsStr;
     studentsStr = "";
-    groupIndex++;
-    console.log(groupIndex);
+    if (groupIndex < groups.length) {
+      groupIndex++;
+    }
     theList = document.getElementById(groups[groupIndex]);
-    console.log(theList);
   }
 }
 
