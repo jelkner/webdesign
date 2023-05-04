@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  margin: 2vw;
+  padding: 2vw;
+  border: 1px dotted #777;
+}
+header>img {
+  width: 15vw;
+}
+header>h1 {
+  width: 75vw;
+  text-align: center;
+  font-size: 2vw;
+  color: #777;
+}
+footer {
+  text-align: center;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}

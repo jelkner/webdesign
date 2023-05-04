@@ -11,3 +11,4 @@ this challenge for the benefit of my students.
 ## Resources
 
 * [Doing real-time calculations in a form using JavaScript(https://www.javascript-coder.com/javascript-form/javascript-calculator-script/)
+* [JavaScript Radio Button](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)

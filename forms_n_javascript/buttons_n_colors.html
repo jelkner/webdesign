@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url(../css/style.css);
+form {
+    margin: 40px;
+}
+fieldset {
+    padding: 20px;
+}
+input {
+    margin-top: 10px;
+}
+</style>
+<script>
+function generateColorPicker() {
+  const colors = ['red', 'green', 'blue', 'orange', 'yellow', 'black',
+                  'silver', 'purple', 'cyan'];
+
+  // generate the radio groups
+  const fieldset = document.querySelector("#fieldset");
+  fieldset.innerHTML = colors.map((color) => `
+  <input type="radio" name="color" value="${color}" id="${color}">
+  <label for="${color}">${color}</label><br>`).join('\n');
+
+  // add an event listener for the change event
+  const radioButtons = document.querySelectorAll('input[name="color"]');
+  for(const radioButton of radioButtons){
+    radioButton.addEventListener('change', showSelected);
+  }
+
+  function showSelected(e) {
+    console.log(e);
+    if (this.checked) {
+      document.body.style.backgroundColor = `${this.value}`;
+    }
+  }
+}
+
+function init() {
+  let loc = window.location.href;
+  let HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  let CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                                loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  generateColorPicker();
+}
+window.onload = init;
+</script>
+<script>
+</script>
+</head>
+<body>
+<header>
+<h1>What is your favorite color?</h1>
+</header>
+
+<form>
+<fieldset>
+<legend>Color Picker</legend>
+<div id="fieldset">
+</div>
+</fieldset>
+</form>
+
+<footer id="vLinks">
+<a id="vLink1">
+<strong> HTML </strong> Valid! </a> | 
+<a id="vLink2">
+<strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
