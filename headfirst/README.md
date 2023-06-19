@@ -11,9 +11,7 @@ certification exam with JavaScript questions.
 To address that, I plan to supplement the online CIW curriculum with
 chapters from *HeadFirst HTML5 Programming* using the following mapping:
 
-**CIW Lesson 5: Introduction to JavaScript**
-   Chapter 1 - Getting to know HTML5: Welcome to Webville and
-   Chapter 2 - Introducting JavaScript and the DOM: A Little Code.
-**CIW Lesson 6: JavaScript Events, Functions and Methods**
-   Chapter 3 - Events, handlers and all that jazz: A Little Interaction and
-   Chapter 4 - JavaScript functions and objects: Serious JavaScript.
+| CIW Lesson | HeadFirst HTML5 Programming Chapters |
+| ---------- | ------------------------------------ |
+| 5: Introduction to JavaScript | Chapter 1 - Getting to know HTML5: Welcome to Webville and Chapter 2 - Introducting JavaScript and the DOM: A Little Code |
+| Lesson 6: JavaScript Events, Functions and Methods | Chapter 3 - Events, handlers and all that jazz: A Little Interaction and Chapter 4 - JavaScript functions and objects: Serious JavaScript |
