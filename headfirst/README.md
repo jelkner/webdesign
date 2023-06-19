@@ -13,5 +13,6 @@ chapters from *HeadFirst HTML5 Programming* using the following mapping:
 
 | CIW Lesson | HeadFirst HTML5 Programming Chapters |
 | ---------- | ------------------------------------ |
-| 5: Introduction to JavaScript | Chapter 1 - Getting to know HTML5: Welcome to Webville and Chapter 2 - Introducting JavaScript and the DOM: A Little Code |
-| Lesson 6: JavaScript Events, Functions and Methods | Chapter 3 - Events, handlers and all that jazz: A Little Interaction and Chapter 4 - JavaScript functions and objects: Serious JavaScript |
+| 5: Introduction to JavaScript | 1 - Getting to know HTML5: Welcome to Webville and 2 - Introducting JavaScript and the DOM: A Little Code |
+| 6: JavaScript Events, Functions and Methods | 3 - Events, handlers and all that jazz: A Little Interaction and 4 - JavaScript functions and objects: Serious JavaScript |
+| 7: Using HTML5 APIs | 5 - Making your HTML location aware: Geolocation and 7 - Bringing out your inner artist: The Canvas |
