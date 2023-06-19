@@ -1,2 +1,5 @@
-# itd210
-Example website for ACC Web Page Design Classes
+# Web Design and Development
+
+Resources and examples for
+[Arlington Career Center](https://careercenter.apsva.us/) web development
+class.
