@@ -38,8 +38,8 @@
 7. What does our book tell us to use to organize our files, images, etc.?
    What does the book call these? What does your teacher call them? 
 
-   > The book tells us to use **folders** to our files, images, etc., but our
-     teacher calls them **directories** (*Thanks Alex E.!*).
+   > The book tells us to use **folders** to organize our files, images, etc.,
+     but our teacher calls them **directories** (*Thanks Alex E.!*).
 
 8. Explain what a path is.
 
