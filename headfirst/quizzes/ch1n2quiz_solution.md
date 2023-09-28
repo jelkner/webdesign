@@ -50,4 +50,4 @@
      ```
      % /Users/grantsr/Projects/CSP/documents/squid.pdf
      ```
-     (*Thanks Grant S-R!*).
+   > (*Thanks Grant S-R!*).
