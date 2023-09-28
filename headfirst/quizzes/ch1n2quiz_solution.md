@@ -25,7 +25,7 @@
 
 5. In which HTML element do you put your CSS?
 
-   > &lt;style&gt;&lt;/style&gt; which is in &lt;head&gt;&gt;&lt;/head&gt;
+   > &lt;style&gt;&lt;/style&gt; which is in &lt;head&gt;&lt;/head&gt;
      (*Thanks Kate!*) 
 
 6. What is an attribute?  Do you remember which attribute presented in the
