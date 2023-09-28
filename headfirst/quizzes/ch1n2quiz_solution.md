@@ -47,7 +47,7 @@
      [file system](https://en.wikipedia.org/wiki/File_system), starting from
      the **root directory** and including what directories you have to go
      through to arrive at your file.  Example:
-      ```
-      % /Users/grantsr/Projects/CSP/documents/squid.pdf
-      ```
-      (*Thanks Grant S-R!*).
+     ```
+     % /Users/grantsr/Projects/CSP/documents/squid.pdf
+     ```
+     (*Thanks Grant S-R!*).
