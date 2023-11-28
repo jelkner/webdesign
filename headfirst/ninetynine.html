@@ -21,6 +21,31 @@ h1 {
 }
 </style>
 <script>
+function generate_lyrics() {
+  let drink = "Energy Drink";
+  let lyrics = "";
+  let cans = 99;
+
+  while (cans > 1) {
+    lyrics += "<p style=\"color: ";
+    lyrics += (cans % 2 == 0) ? "red" : "green";
+    lyrics += ";\">";
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += "Take one down, pass it around,";
+    lyrics += "</p>";
+    cans--;
+  }
+  lyrics += "<p>";
+  lyrics += cans + " can of " + drink + " on the wall <br>";
+  lyrics += cans + " can of " + drink + " on the wall <br>";
+  lyrics += "Take one down, pass it around, no more cans of ";
+  lyrics += drink + " on the wall :-(";
+  lyrics += "</p>";
+
+  document.getElementById("song").innerHTML = lyrics;
+}
+
 function init() {
   var loc = window.location.href;
   var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
@@ -28,6 +53,8 @@ function init() {
                         loc + '?profile=css3';
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  generate_lyrics();
 }
 
 window.onload = init;
@@ -44,27 +71,5 @@ window.onload = init;
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
 </footer>
-<script>
-let drink = "Energy Drink";
-let lyrics = "";
-let cans = 99;
-
-while (cans > 1) {
-  lyrics += "<p>";
-  lyrics += cans + " cans of " + drink + " on the wall <br>";
-  lyrics += cans + " cans of " + drink + " on the wall <br>";
-  lyrics += "Take one down, pass it around,";
-  lyrics += "</p>";
-  cans--;
-}
-lyrics += "<p>";
-lyrics += cans + " can of " + drink + " on the wall <br>";
-lyrics += cans + " can of " + drink + " on the wall <br>";
-lyrics += "Take one down, pass it around, no more cans of ";
-lyrics += drink + " on the wall :-(";
-lyrics += "</p>";
-
-document.getElementById("song").innerHTML = lyrics;
-</script>
 </body>
 </html>
