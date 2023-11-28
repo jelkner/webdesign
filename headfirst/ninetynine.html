@@ -21,6 +21,19 @@ h1 {
 }
 </style>
 <script>
+function holiday_heading() {
+  let title = "Ninety-nine Cans of Energy Drink";
+  let tstr = "";
+  let numchars = title.length;
+  
+  for (let i = 0; i < numchars; i++ ) {
+    tstr += "<span style=\"color: ";
+    tstr += (i % 2 == 0) ? "red" : "green";
+    tstr += ";\">" + title[i] + "</span>";
+  }
+  document.getElementById("title").innerHTML = tstr;
+}
+
 function generate_lyrics() {
   let drink = "Energy Drink";
   let lyrics = "";
@@ -54,6 +67,7 @@ function init() {
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 
+  holiday_heading();
   generate_lyrics();
 }
 
@@ -62,7 +76,7 @@ window.onload = init;
 </head>
 <body>
 <header>
-<h1>Ninety-nine Cans of Energy Drink</h1>
+<h1 id="title">Ninety-nine Cans of Energy Drink</h1>
 </header>
 <main id="song">
 
