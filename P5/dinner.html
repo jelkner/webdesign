@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>P5 Experiments</title>
+<title>P5 Experiments: What's for Dinner?</title>
 <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 <style>
 @import url(css/style.css);
 </style>
+<script src="p5/p5.min.js"></script>
 <script>
 function init() {
   let loc = window.location.href;
@@ -21,23 +22,30 @@ window.onload = init;
 </head>
 
 <body>
-<h1>P5 Experiments</h1>
+<h1>P5 Experiments: What's for Dinner?</h1>
 <main>
-<p>
-Welcome to my <a href="https://p5js.org">p5.js</a> experiments website!
-</p>
+<script>
+function setup() {
+  createCanvas(800, 800);
+}
 
-<h2>Experiments</h2>
-<ul>
-<li><a href="dinner.html">What's for Dinner?</a></li>
-</ul>
+function draw() {
+  background(186, 145, 20); // wooden table
+  // plate
+  fill(255, 255, 255);
+  ellipse(400, 400, 700, 700);
+  ellipse(400, 400, 600, 600);
 
-<h2>Resources</h2>
-<ul>
-<li>
-<a href="https://stackoverflow.com/questions/55879820/how-to-create-more-than-one-canvas-with-p5">
-How to create more than one canvas with p5?</a></li>
-</ul>
+  // grapes!
+  fill(195, 116, 207);
+  ellipse(200, 200, 30, 30);
+  ellipse(223, 200, 30, 30);
+  ellipse(249, 200, 30, 30);
+  ellipse(274, 200, 30, 30);
+  ellipse(231, 220, 30, 30);
+  ellipse(254, 220, 30, 30);
+}
+</script>
 </main>
 
 <footer>
