@@ -13,6 +13,22 @@ h1 {
 h2 {
   font-size: 1.5vw;
 }
+header {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: auto;
+  grid-gap: 1vw;
+}
+header>h1 {
+  text-align: left;
+}
+header>form {
+  text-align: right;
+  margin-top: 3vw;
+}
 main {
   margin-left: 4vw;
   margin-right: 4vw;
@@ -55,6 +71,16 @@ Search Web</button>
 <main>
 <h2>Registration Form</h2>
 <form>
+<p>
+  <label for="first">First name:</label>
+  <input type="text" name="firstname" id="first">
+</p><p>
+  <label for="last">Last name:</label>
+  <input type="text" name="lastname" id="last">
+</p><p>
+  <label for="db">Date of birth:</label>
+  <input type="date" name="dob" id="db">
+</p>
 </form>
 </main>
 
