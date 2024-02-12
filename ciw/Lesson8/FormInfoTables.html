@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Form Input Types</title>
+<title>Form Info Tables</title>
 <style>
 h1, footer {
   text-align: center;
@@ -11,6 +11,7 @@ h1 {
   font-size: 2.4vw;
 }
 h2 {
+  margin-left: 2vw;
   font-size: 1.5vw;
 }
 main {
@@ -18,6 +19,15 @@ main {
   margin-right: 4vw;
   padding: 2vw;
   border: 1px dotted #777;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px dotted #777;
+}
+th, td {
+  padding: 0.5vw;
 }
 footer {
   margin-top: 1vw;
@@ -45,9 +55,10 @@ window.onload = init;
 </head>
 <body>
 <header>
-<h1>Form Input Types</h1>
+<h1>Form Info Tables</h1>
 </header>
 <main>
+<h2>Form Input Types</h2>
 <table>
 <tr>
   <th>HTML5 Input Type</th><th>Description</th>
@@ -107,6 +118,34 @@ window.onload = init;
   <td>week</td>
   <td>Allows user to choose a date using the week and year (without time zone)
   </td>
+</tr>
+</table>
+
+<h2>HTML5 Global Attributes for Form Elements</h2>
+<table>
+<tr>
+  <th>Attribute</th><th>Description</th>
+</tr>
+<tr>
+  <td>autofocus</td>
+  <td>Applies focus on the element when the page loads</td>
+</tr>
+<tr>
+  <td>disabled</td>
+  <td>Disables the element</li>
+</tr>
+<tr>
+  <td>for</td>
+  <td>Specifies the IDs of elements whose values were used</td>
+</tr>
+<tr>
+  <td>form</td>
+  <td>Specifies the form(s) on the page in which the element appears</td>
+</tr>
+<tr>
+  <td>maxlength</td>
+  <td>Specifies the maximum number of characters that can be entered in the
+  field by the user</td>
 </tr>
 </table>
 </main>
