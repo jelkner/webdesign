@@ -5,6 +5,12 @@
 <title>Using Search and Input in Forms</title>
 <style>
 @import url(css/forms.css);
+form#vgame {
+  background-color: #DDD;
+}
+form#vgame button {
+  margin-top: 2vw;
+}
 </style>
 <script src="js/validation.js"></script>
 <script>
@@ -217,6 +223,24 @@ Search Web</button>
   <option value="milk">Milk</option>
   </select>
 </fieldset>
+</form>
+
+<h2>Video Games (from test question)</h2>
+<form id="vgame">
+<fieldset>
+<legend>Video Games: Choose One</legend>
+<div>
+<input type="radio" id="mariokart" name="mariocart" value="mariocart">
+<label for="mariokart">Mario Kart</label>
+</div><div>
+<input type="radio" id="fortnite" name="fortnite" value="fortnite">
+<label for="fortnite">Fortnite</label>
+</div><div>
+<input type="radio" id="zelda" name="zelda" value="zelda">
+<label for="zelda">The Legend of Zelda: Tears of the Kingdom</label>
+</div>
+</fieldset>
+<button>Submit</button>
 </form>
 </main>
 
