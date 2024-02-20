@@ -4,59 +4,11 @@
 <meta charset="utf-8">
 <title>Using Search and Input in Forms</title>
 <style>
-h1, footer {
-  text-align: center;
-}
-h1 {
-  font-size: 2.4vw;
-}
-h2 {
-  font-size: 1.5vw;
-}
-header {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 45vw 45vw;
-  grid-template-rows: auto;
-  grid-gap: 1vw;
-}
-header>h1 {
-  text-align: left;
-}
-header>form {
-  text-align: right;
-  margin-top: 3vw;
-}
-main {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  padding: 2vw;
-  border: 1px dotted #777;
-}
-footer {
-  margin-top: 1vw;
-  font-size: 0.9vw;
-}
-footer>a, footer>a:visited {
-  text-decoration: none;
-  color: #555;
-}
+@import url(css/forms.css);
 </style>
+<script src="js/validation.js"></script>
 <script>
-function init() {
-  let loc = window.location.href;
-  let HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
-  let CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
-                        loc + '?profile=css3';
-  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
-  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
-  document.getElementById("files").addEventListener(
-    "change", handleFileSelect
-  );
-}
-window.onload = init;
+window.onload = activateValidationLinks;
 </script>
 </head>
 <body>
@@ -109,7 +61,7 @@ Search Web</button>
 <p>
 <label for="fname">First name:</label>
 <input type="text" id="fname" name="fname">
-<label for="lname">Last name:</label>
+<label for="lname" class="sameline">Last name:</label>
 <input type="text" id="lname" name="lname">
 </p><p>
 <label for="choice1">1st Hour Choice:</label>
@@ -126,7 +78,7 @@ Search Web</button>
   <option value="csc222">CSC222</option>
   <option value="csc223">CSC223</option>
 </select>
-<label for="choice2">2nd Hour Choice:</label>
+<label for="choice2" class="sameline">2nd Hour Choice:</label>
 <select name="choice2" id="choice2">
   <option value="">Select a course:</option>
   <option value="itd110">ITD110</option>
@@ -155,7 +107,7 @@ Search Web</button>
   <option value="csc222">CSC222</option>
   <option value="csc223">CSC223</option>
 </select>
-<label for="choice4">4th Hour Choice:</label>
+<label for="choice4" class="sameline">4th Hour Choice:</label>
 <select name="choice4" id="choice4">
   <option value="">Select a course:</option>
   <option value="itd110">ITD110</option>
@@ -184,7 +136,7 @@ Search Web</button>
   <option value="csc222">CSC222</option>
   <option value="csc223">CSC223</option>
 </select>
-<label for="choice6">6th Hour Choice:</label>
+<label for="choice6" class="sameline">6th Hour Choice:</label>
 <select name="choice6" id="choice6">
   <option value="">Select a course:</option>
   <option value="itd110">ITD110</option>
@@ -213,7 +165,7 @@ Search Web</button>
   <option value="csc222">CSC222</option>
   <option value="csc223">CSC223</option>
 </select>
-<label for="choice8">8th Hour Choice:</label>
+<label for="choice8" class="sameline">8th Hour Choice:</label>
 <select name="choice8" id="choice8">
   <option value="">Select a course:</option>
   <option value="itd110">ITD110</option>
@@ -228,7 +180,7 @@ Search Web</button>
   <option value="csc223">CSC223</option>
 </select>
 </p><p>
-<button>Submit</button><button>Reset</button>
+<button>Submit</button><button class="sameline">Reset</button>
 </p>
 </fieldset>
 </form>

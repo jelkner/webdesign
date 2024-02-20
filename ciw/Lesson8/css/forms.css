@@ -1,0 +1,42 @@
+h1, footer {
+  text-align: center;
+}
+h1 {
+  font-size: 2.4vw;
+}
+h2 {
+  font-size: 1.5vw;
+}
+header {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: auto;
+  grid-gap: 1vw;
+}
+header>h1 {
+  text-align: left;
+}
+header>form {
+  text-align: right;
+  margin-top: 3vw;
+}
+main {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  padding: 2vw;
+  border: 1px dotted #777;
+}
+footer {
+  margin-top: 1vw;
+  font-size: 0.9vw;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}
+.sameline {
+  margin-left: 1vw;
+}
