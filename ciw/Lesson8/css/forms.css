@@ -6,6 +6,7 @@ h1 {
 }
 h2 {
   font-size: 1.5vw;
+  margin-top: 2vw;
 }
 header {
   margin-left: 4vw;
@@ -39,4 +40,7 @@ footer>a, footer>a:visited {
 }
 .sameline {
   margin-left: 1vw;
+}
+fieldset:nth-of-type(2) {
+  margin-top: 1vw;
 }
