@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Form Info Tables</title>
+<style>
+h1, footer {
+  text-align: center;
+}
+h1 {
+  font-size: 2.4vw;
+}
+h2 {
+  margin-left: 2vw;
+  font-size: 1.5vw;
+}
+main {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  padding: 2vw;
+  border: 1px dotted #777;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px dotted #777;
+}
+th, td {
+  padding: 0.5vw;
+}
+footer {
+  margin-top: 1vw;
+  font-size: 0.9vw;
+}
+footer>a, footer>a:visited {
+  text-decoration: none;
+  color: #555;
+}
+</style>
+<script>
+function init() {
+  let loc = window.location.href;
+  let HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  let CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+  document.getElementById("files").addEventListener(
+    "change", handleFileSelect
+  );
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<header>
+<h1>Form Info Tables</h1>
+</header>
+<main>
+<h2>Form Input Types</h2>
+<table>
+<tr>
+  <th>HTML5 Input Type</th><th>Description</th>
+</tr>
+<tr>
+  <td>color</td>
+  <td>Allows user to choose colors</td>
+</tr>
+<tr>
+  <td>date</td>
+  <td>Allows the user to enter a date (without time zone) using a
+  drop-down date-picker calendar</td>
+</tr>
+<tr>
+  <td>datetime</td>
+  <td>Allows user to choose a date and a time with a GMT time zone</td>
+</tr>
+<tr>
+  <td>datetime-local</td>
+  <td>Allows user to choose a date and a time with a local time zone</td>
+</tr>
+<tr>
+  <td>email</td>
+  <td>Allows user to enter one or more email addresses</td>
+</tr>
+<tr>
+  <td>month</td>
+  <td>Allows user to choose a date using the month and year (without time zone)
+  </td>
+</tr>
+<tr>
+  <td>number</td>
+  <td>Allows user to enter integer or float values</td>
+</tr>
+<tr>
+  <td>range</td>
+  <td>Allows user to enter numbers using a slider control</td>
+</tr>
+<tr>
+  <td>search</td>
+  <td>Allows user to enter text for a search query</td>
+</tr>
+<tr>
+  <td>tel</td>
+  <td>Allows user to enter a phone number</td>
+</tr>
+<tr>
+  <td>time</td>
+  <td>Allows user to enter a time (without time zone)</td>
+</tr>
+<tr>
+  <td>url</td>
+  <td>Allows user to enter a URL, such as an http://, https://, ftp://,
+  or mailto: address</td>
+</tr>
+<tr>
+  <td>week</td>
+  <td>Allows user to choose a date using the week and year (without time zone)
+  </td>
+</tr>
+</table>
+
+<h2>HTML5 Global Attributes for Form Elements</h2>
+<table>
+<tr>
+  <th>Attribute</th><th>Description</th>
+</tr>
+<tr>
+  <td>autofocus</td>
+  <td>Applies focus on the element when the page loads</td>
+</tr>
+<tr>
+  <td>disabled</td>
+  <td>Disables the element</li>
+</tr>
+<tr>
+  <td>for</td>
+  <td>Specifies the IDs of elements whose values were used</td>
+</tr>
+<tr>
+  <td>form</td>
+  <td>Specifies the form(s) on the page in which the element appears</td>
+</tr>
+<tr>
+  <td>maxlength</td>
+  <td>Specifies the maximum number of characters that can be entered in the
+  field by the user</td>
+</tr>
+</table>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>

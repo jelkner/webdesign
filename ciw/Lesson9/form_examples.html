@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Advanced HTML5 Forms</title>
+<style>
+@import url(css/forms.css);
+form#vgame {
+  background-color: #DDD;
+}
+form#vgame button {
+  margin-top: 2vw;
+}
+</style>
+<script src="js/validation.js"></script>
+<script>
+window.onload = activateValidationLinks;
+</script>
+</head>
+<body>
+<header>
+<h1>Advanced HTML5 Forms</h1>
+<form>
+<input type="search" name="websearch" placeholder="Enter search">
+<button type="submit" formaction="https://www.ciwcertified.com/about-ciw">
+Search Web</button>
+</form>
+</header>
+<main>
+<h2>Personal Information Form</h2>
+<form autocomplete="on">
+<fieldset name="personal_info">
+<legend>Personal Information:</legend>
+<p>
+  <label for="title">Title:</label>
+  <input list="titles" name="title" id="title">
+  <datalist id="titles">
+    <option value="Mr."></option>
+    <option value="Mrs."></option>
+    <option value="Ms."></option>
+  </datalist>
+</p><p>
+  <label for="first">First name:</label>
+  <input type="text" name="firstname" id="first">
+</p><p>
+  <label for="last">Last name:</label>
+  <input type="text" name="lastname" id="last">
+</p><p>
+  <label for="db">Date of birth:</label>
+  <input type="date" name="dob" id="db">
+</p>
+</fieldset>
+</form>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
