@@ -44,7 +44,50 @@ when they really are not.
 
 Next Dan discusses front-end JavaScript frameworks, including
 [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)),
+[React](https://en.wikipedia.org/wiki/React_(JavaScript_library)),
 
+I learned in this video about the 
+[MERN](https://en.wikipedia.org/wiki/MEAN_(solution_stack)) solution stack.
+Since our course is laying the foundation for using frameworks like this, it
+is good to know what lies ahead for students who pursue their study further.
+
+I also didn't know that
+[React Native](https://en.wikipedia.org/wiki/React_Native) existed as a
+framework for writting web apps that can be compiled into native apps for
+Android and iOS. Coming from the Python community, I have been aware of
+[BeeWare](https://beeware.org/), which has the same goal, for a long time.
+
+I was totally unaware of [GSAP](https://gsap.com/) (a.k.a "GreenSock"),
+a JavaScript animation library that some of my students would *love*. I'll
+ask one of them to check it out soon.
+
+Dan then talks about [jQuery](https://en.wikipedia.org/wiki/JQuery), confirming
+what I already knew, that while it played an important role in the development
+of the web, modern JavaScript is making using it less and less necessary.
+
+Next comes a brief discussion of
+[WordPress](https://en.wikipedia.org/wiki/WordPress). I was already well aware
+of this.
+
+The lecture next discusses of code editors and revision control, specifically 
+[Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code),
+[Git](https://en.wikipedia.org/wiki/Git), and
+[GitHub](https://en.wikipedia.org/wiki/GitHub). I did not know that
+VSCode was an
+[Electron](https://en.wikipedia.org/wiki/Electron_(software_framework)) based
+application that could be launched on the GitHub website by simply pressing the
+<code>.</code> key. Cool!
+
+Dan then talks about the use of HTML and CSS for email. I learned several
+things I did not know about how their use in email differs from current web
+browser use due to the different ways they are rendered.
+
+The lecture ends asking viewers to consider whether front-end or back-end
+development might be right for them given what they learned in the video.
+
+All-in-all I found it a useful lecture in which I learned several new things
+and which I would happily recommend to my students to get an overview of
+what we are learning in ITD 110 and 210.
 
 
 ## Get Started in Web Design
