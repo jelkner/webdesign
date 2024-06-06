@@ -4,7 +4,7 @@ At the end of the 2023-24 school year, I watched the following videos
 recommended by my NVCC evaluator for end-of-year professional development:
 
 * [Intro to Front-End Web Development](https://www.youtube.com/watch?v=7C4dv8vuwEk)
-* [Get Started in Web Design](https://www.youtube.com/watch?v=05r34Q9oM-8)
+* [Getting Started in Web Design](https://www.youtube.com/watch?v=05r34Q9oM-8)
 * [Intro to UI Design](https://www.youtube.com/watch?v=GbJLsSi7ehY)
 
 All three videos contain lectures by Dan Rodney from
@@ -90,10 +90,49 @@ and which I would happily recommend to my students to get an overview of
 what we are learning in ITD 110 and 210.
 
 
-## Get Started in Web Design
+## Getting Started in Web Design
 
+This video is a lab designed to get learners started actually creating their
+first web page.  It's basically a creating a "Hello World!" website
+walk-through.
+
+I did not watch the full video.  It was clear to me only a few minutes into it
+that I would *definitely not* want to use it with my classes for one clear and
+simple reason: I have a workflow, with a specific set of skills and practices,
+that I want students to learn, beginning with developing comfort managing files
+and directories (and using git) from the Unix CLI.  This video would have them
+learn a totally different workflow which would cause no end of confusion,
+struggle, and hardship within my classroom. So there is not much here of use
+to me.
 
 
 ## Intro to UI Design
 
+Right out of the gate I could tell this third video would be much more useful
+to me than the previous one. It promises in the first slide to address the
+following topics:
+
+* What goes into designing &amp; building apps/websites?
+* How UI and UX design relate to each other
+* What apps are used in UI design?
+* Techniques &amp; Tools: Wireframing, prototyping, visual design, typography,
+  UI kits, &amp; more
+
+### What goes into designing &amp; building apps/websites?
+
+Dan starts by drawing our attention two the two complementary roles involved in
+creating a website: **designers** and **developers**.  The thing I like best
+about teaching web development is that it empowers learners to become
+*publishers* of globally available information about anything that is important
+to them.  While the ability to design and publish is what attracted me, I'm
+definitely a latecomer to the design party, and that has long been a weakness of
+mine as a web teacher. I can teach the developer skills, but not the design
+skills.
+
+Dan lists some design apps, [Figma](https://en.wikipedia.org/wiki/Figma),
+[Adobe XD](https://en.wikipedia.org/wiki/Adobe_XD),
+and [Sketch](https://en.wikipedia.org/wiki/Sketch_(software)), none of which I
+was familiar with. All of them are propriatary software, but reading about
+them inspired to seek their best open source alternative, which I determined
+to be [Penpot](https://penpot.app/).
 
