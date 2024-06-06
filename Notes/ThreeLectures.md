@@ -136,3 +136,23 @@ was familiar with. All of them are propriatary software, but reading about
 them inspired to seek their best open source alternative, which I determined
 to be [Penpot](https://penpot.app/).
 
+
+### How Do UI and UX design relate to each other?
+
+The next section discusses the relationship between 
+[UX](https://en.wikipedia.org/wiki/User_experience_design) and
+[UI](https://en.wikipedia.org/wiki/User_interface).
+
+It defines UX as "designing the user's experience, which should be easy to use,
+intuitive, and anticipate the user's needs." Since UX is all about users, it
+should be created using
+[user-centered design](https://en.wikipedia.org/wiki/User-centered_design),
+with its user research and user testing involved throughout the development
+process.
+
+UI design is concerned with the visual aspects of digital products like our
+websites and apps. It focuses on layout, color, composition, and other visual
+elements.
+
+The user interface design obviously impacts the user experience, but UI is
+focused on *how it looks* while UX is focused on *how it works*.
